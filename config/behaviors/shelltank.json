@@ -1,0 +1,106 @@
+{
+    "behavior": [
+        {
+            "description": "Pick up crown",
+            "conditions": [
+                [
+                    "Detected",
+                    "base:CROWN",
+                    160,
+                    "$crown"
+                ]
+            ],
+            "plan": {
+                "name": "pickup_crown",
+                "tasks": [
+                    [
+                        "MoveTo",
+                        "$crown"
+                    ],
+                    [
+                        "RemoveFrom",
+                        "$crown"
+                    ]
+                ]
+            },
+            "priority": 20
+        },
+        {
+            "conditions": [
+                [
+                    "Detected",
+                    "OPPONENT",
+                    224,
+                    "$opp"
+                ]
+            ],
+            "plan": "base:attack",
+            "inputs": {
+                "attack": "Attack",
+                "distance": 192,
+                "job:target": "$opp"
+            },
+            "priority": 20,
+            "every": 2
+        },
+        {
+            "conditions": [
+                [
+                    "CanSiege",
+                    "King",
+                    "$tile"
+                ]
+            ],
+            "plan": {
+                "name": "siege",
+                "tasks": [
+                    [
+                        "Destroy",
+                        "$tile"
+                    ]
+                ]
+            },
+            "priority": 11,
+            "every": 30
+        },
+        {
+            "conditions": [
+                [
+                    "Equal",
+                    "Self",
+                    "King"
+                ]
+            ],
+            "plan": "base:escape_with_crown"
+        },
+        {
+            "conditions": [
+                [
+                    "!Accessible",
+                    "King"
+                ]
+            ],
+            "plan": {
+                "name": "find_king",
+                "tasks": [
+                    [
+                        "MakePathTo",
+                        "King"
+                    ]
+                ]
+            }
+        },
+        {
+            "plan": {
+                "name": "chase_king",
+                "tasks": [
+                    [
+                        "MoveTo",
+                        "King",
+                        128
+                    ]
+                ]
+            }
+        }
+    ]
+}

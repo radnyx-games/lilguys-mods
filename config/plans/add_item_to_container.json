@@ -1,0 +1,52 @@
+{
+    "name": "add_item_to_container",
+    "validate": [
+        [
+            "Exists",
+            "$job:target"
+        ]
+    ],
+    "tasks": [
+        [
+            "MoveTo",
+            "$job:source",
+            56
+        ],
+        [
+            "RemoveFrom",
+            "$job:source"
+        ],
+        [
+            "MoveTo",
+            "$job:target"
+        ],
+        "#WaitForSpace",
+        [
+            "JumpIf",
+            [
+                [
+                    "!Full",
+                    "$job:target"
+                ]
+            ],
+            "#Add"
+        ],
+        [
+            "Animate",
+            "Wait"
+        ],
+        [
+            "Wait",
+            60
+        ],
+        [
+            "Jump",
+            "#WaitForSpace"
+        ],
+        "#Add",
+        [
+            "AddTo",
+            "$job:target"
+        ]
+    ]
+}

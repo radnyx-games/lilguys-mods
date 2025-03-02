@@ -1,0 +1,10 @@
+{
+    "name": "walk_command",
+    "default_priority": 10,
+    "tasks": [
+        [
+            "MoveTo",
+            "$walk_target"
+        ]
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "tiles": {
+        "solid_empty": {
+            "terrains": {
+                "default": "base:solid_empty"
+            }
+        },
+        "castle_wall": {
+            "terrains": {
+                "default": "base:castle_wall",
+                "damaged": "base:castle_wall_damaged"
+            },
+            "hp": 10
+        },
+        "cave_wall": {
+            "terrains": {
+                "default": "base:cave_wall",
+                "damaged": "base:cave_wall_damaged"
+            },
+            "hp": 5
+        },
+        "door": {
+            "terrains": {
+                "default": "base:door"
+            },
+            "hp": 15,
+            "door": true
+        }
+    },
+    "terrains": {
+        "solid_empty": {
+            "coords": {
+                "x": 1,
+                "y": 0
+            },
+            "type": "SINGLE"
+        },
+        "castle_wall": {
+            "coords": {
+                "x": 0,
+                "y": 1
+            },
+            "type": "DECORATED_13"
+        },
+        "castle_wall_damaged": {
+            "coords": {
+                "x": 8,
+                "y": 1
+            },
+            "type": "DECORATED_13"
+        },
+        "cave_wall": {
+            "coords": {
+                "x": 0,
+                "y": 3
+            },
+            "type": "BASIC_47"
+        },
+        "cave_wall_damaged": {
+            "coords": {
+                "x": 0,
+                "y": 8
+            },
+            "type": "BASIC_47"
+        },
+        "door": {
+            "coords": {
+                "x": 0,
+                "y": 12
+            },
+            "type": "DECORATED_ANIMATION",
+            "animation_frames": 8
+        }
+    }
+}

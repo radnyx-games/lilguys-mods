@@ -1,0 +1,17 @@
+{
+    "name": "base",
+    "version": "0.0.4c",
+    "max_guy_count": 150,
+    "start_guy_count": 10,
+    "world_size": 128,
+    "build_menu": [
+        "base:castle_wall",
+        "base:dispenser",
+        "base:bakery",
+        "base:door",
+        "base:outpost"
+    ],
+    "constants": {
+        "GUY_ATTACK_PRIORITY": 13
+    }
+}

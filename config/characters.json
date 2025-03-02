@@ -1,0 +1,14 @@
+{
+    "GUY": {
+        "icon": "res://assets/sprites/ui/icons/guy.png",
+        "scene": "res://scenes/entities/characters/Guy.tscn"
+    },
+    "SKULLOS": {
+        "icon": "res://assets/sprites/ui/icons/skullos.png",
+        "scene": "res://scenes/entities/characters/enemies/Skullos.tscn"
+    },
+    "SHELLTANK": {
+        "icon": "res://assets/sprites/ui/icons/shelltank.png",
+        "scene": "res://scenes/entities/characters/enemies/Shelltank.tscn"
+    }
+}

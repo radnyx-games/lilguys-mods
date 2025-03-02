@@ -1,0 +1,20 @@
+{
+    "name": "attack",
+    "inputs": {
+        "job:target": {},
+        "distance": {},
+        "attack": {}
+    },
+    "tasks": [
+        [
+            "MoveTo",
+            "$job:target",
+            "$distance"
+        ],
+        [
+            "Attack",
+            "$job:target",
+            "$attack"
+        ]
+    ]
+}

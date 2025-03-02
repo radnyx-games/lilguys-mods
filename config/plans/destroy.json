@@ -1,0 +1,20 @@
+{
+    "name": "destroy",
+    "tasks": [
+        "#Start",
+        [
+            "MoveTo",
+            "$job:target",
+            13
+        ],
+        [
+            "Attack",
+            "$job:target",
+            "RandomAttack"
+        ],
+        [
+            "Jump",
+            "#Start"
+        ]
+    ]
+}

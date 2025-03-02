@@ -1,0 +1,91 @@
+{
+    "castle_wall": {
+        "icon": "res://assets/sprites/ui/build/wall.png",
+        "name_text": "castle_wall_name",
+        "description_text": "castle_wall_description",
+        "center": {
+            "x": 16,
+            "y": 48
+        },
+        "blueprint": {
+            "tile": "base:castle_wall",
+            "texture": "res://assets/sprites/blueprints/wall.png",
+            "placement_type": "DRAG_OUTLINE",
+            "cost": {
+                "base:ROCK": 1
+            }
+        }
+    },
+    "dispenser": {
+        "icon": "res://assets/sprites/ui/build/dispenser.png",
+        "name_text": "dispenser_name",
+        "description_text": "dispenser_description",
+        "size": {
+            "x": 2,
+            "y": 2
+        },
+        "center": {
+            "x": 32,
+            "y": 64
+        },
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Stockpile.tscn",
+            "texture": "res://assets/sprites/blueprints/dispenser.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 10
+            }
+        }
+    },
+    "bakery": {
+        "icon": "res://assets/sprites/ui/build/bakery.png",
+        "name_text": "bakery_name",
+        "description_text": "bakery_description",
+        "center": {
+            "x": 16,
+            "y": 64
+        },
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Bakery.tscn",
+            "texture": "res://assets/sprites/blueprints/bakery.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 15
+            }
+        }
+    },
+    "outpost": {
+        "icon": "res://assets/sprites/ui/build/outpost.png",
+        "name_text": "outpost_name",
+        "description_text": "outpost_description",
+        "center": {
+            "x": 16,
+            "y": 144
+        },
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Outpost.tscn",
+            "texture": "res://assets/sprites/entities/buildings/outpost_pole.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 15
+            }
+        }
+    },
+    "door": {
+        "icon": "res://assets/sprites/ui/build/door.png",
+        "name_text": "door_name",
+        "description_text": "door_description",
+        "center": {
+            "x": 16,
+            "y": 32
+        },
+        "blueprint": {
+            "tile": "base:door",
+            "texture": "res://assets/sprites/blueprints/door.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 8
+            }
+        }
+    }
+}

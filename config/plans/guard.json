@@ -1,0 +1,48 @@
+{
+    "name": "guard",
+    "validate": [
+        [
+            "Exists",
+            "$job:target"
+        ]
+    ],
+    "tasks": [
+        "#Start",
+        [
+            "Wait",
+            15,
+            60
+        ],
+        [
+            "JumpIf",
+            [
+                [
+                    "!Accessible",
+                    "$job:target"
+                ]
+            ],
+            "#Exit"
+        ],
+        [
+            "JumpIf",
+            [
+                [
+                    "!AwayFrom",
+                    "$job:target",
+                    160
+                ]
+            ],
+            "#Start"
+        ],
+        [
+            "MoveTo",
+            "$job:target",
+            80
+        ],
+        [
+            "Jump",
+            "#Start"
+        ],
+        "#Exit"
+    ]
+}

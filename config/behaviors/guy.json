@@ -1,0 +1,149 @@
+{
+    "behavior": [
+        {
+            "description": "Pick up crown",
+            "conditions": [
+                [
+                    "Detected",
+                    "base:CROWN",
+                    160,
+                    "$crown"
+                ]
+            ],
+            "plan": {
+                "name": "pickup_crown",
+                "tasks": [
+                    [
+                        "MoveTo",
+                        "$crown"
+                    ],
+                    [
+                        "RemoveFrom",
+                        "$crown"
+                    ]
+                ]
+            },
+            "priority": 14
+        },
+        {
+            "description": "Attack an opponent",
+            "conditions": [
+                [
+                    "!Equal",
+                    "Self",
+                    "King"
+                ],
+                [
+                    "Detected",
+                    "OPPONENT",
+                    250,
+                    "$opp",
+                    "--LimitedToTargetHealth",
+                    "--OnlyInSameRoom",
+                    "--Urgent"
+                ]
+            ],
+            "plan": "base:guy_attack",
+            "inputs": {
+                "job:target": "$opp"
+            },
+            "priority": "%GUY_ATTACK_PRIORITY"
+        },
+        {
+            "description": "Evade bombs",
+            "conditions": [
+                [
+                    "Detected",
+                    "base:BOMB",
+                    80,
+                    "$bomb"
+                ]
+            ],
+            "plan": {
+                "name": "evade_bombs",
+                "tasks": [
+                    [
+                        "FleeFrom",
+                        "$bomb"
+                    ]
+                ]
+            },
+            "priority": 12
+        },
+        {
+            "description": "Avoid clumps",
+            "conditions": [
+                [
+                    "!Moving"
+                ],
+                [
+                    "Detected",
+                    "TEAMMATE",
+                    2,
+                    "$guy"
+                ]
+            ],
+            "plan": {
+                "name": "declump",
+                "tasks": [
+                    [
+                        "FleeFrom",
+                        "$guy",
+                        40,
+                        "--Random"
+                    ]
+                ]
+            },
+            "priority": 11,
+            "every": 8
+        },
+        {
+            "description": "Run away from enemies",
+            "conditions": [
+                [
+                    "Equal",
+                    "Self",
+                    "King"
+                ],
+                [
+                    "Detected",
+                    "OPPONENT",
+                    250,
+                    "$opp",
+                    "--OnlyInSameRoom"
+                ]
+            ],
+            "plan": {
+                "name": "flee",
+                "tasks": [
+                    [
+                        "FleeFrom",
+                        "$opp"
+                    ]
+                ]
+            },
+            "priority": 9
+        },
+        {
+            "description": "Defend the king",
+            "conditions": [
+                [
+                    "AwayFrom",
+                    "King",
+                    160
+                ]
+            ],
+            "plan": {
+                "name": "defend_king",
+                "tasks": [
+                    [
+                        "MoveTo",
+                        "King",
+                        128
+                    ]
+                ]
+            },
+            "every": 16
+        }
+    ]
+}

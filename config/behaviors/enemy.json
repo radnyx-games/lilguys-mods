@@ -1,0 +1,85 @@
+{
+    "behavior": [
+        {
+            "description": "Pick up crown",
+            "conditions": [
+                [
+                    "Detected",
+                    "base:CROWN",
+                    160,
+                    "$crown"
+                ]
+            ],
+            "plan": {
+                "name": "pickup_crown",
+                "tasks": [
+                    [
+                        "MoveTo",
+                        "$crown"
+                    ],
+                    [
+                        "RemoveFrom",
+                        "$crown"
+                    ]
+                ]
+            },
+            "priority": 11
+        },
+        {
+            "conditions": [
+                [
+                    "Detected",
+                    "OPPONENT",
+                    160,
+                    "$opp"
+                ]
+            ],
+            "plan": "base:attack",
+            "inputs": {
+                "attack": "Attack",
+                "distance": 36,
+                "job:target": "$opp"
+            },
+            "priority": 11
+        },
+        {
+            "conditions": [
+                [
+                    "Equal",
+                    "Self",
+                    "King"
+                ]
+            ],
+            "plan": "base:escape_with_crown"
+        },
+        {
+            "conditions": [
+                [
+                    "!Accessible",
+                    "King"
+                ]
+            ],
+            "plan": {
+                "name": "find_king",
+                "tasks": [
+                    [
+                        "MakePathTo",
+                        "King"
+                    ]
+                ]
+            }
+        },
+        {
+            "plan": {
+                "name": "chase_king",
+                "tasks": [
+                    [
+                        "MoveTo",
+                        "King",
+                        128
+                    ]
+                ]
+            }
+        }
+    ]
+}
