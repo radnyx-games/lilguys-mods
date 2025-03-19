@@ -2,7 +2,7 @@
     "name": "add_item_to_container",
     "validate": [
         [
-            "Exists",
+            "Accessible",
             "$job:target"
         ]
     ],

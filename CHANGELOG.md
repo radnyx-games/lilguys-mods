@@ -8,9 +8,10 @@
 - removed ability to destroy blocks outside playzone
 - much nicer error messages
 - fix: lil guys slow to react after getting hit
+- fix: lil guys dropping items through walls
+- fix: lil guys mysteriously quitting outpost job
 - fix: missing damaged wall texture
 - fix: possible to game over on title screen
-- fix: lil guys dropping items through walls
 
 ## 0.0.4b - 2024-11-25
 
