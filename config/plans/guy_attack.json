@@ -1,10 +1,8 @@
 {
     "name": "guy_attack",
-    "default_priority": "%GUY_ATTACK_PRIORITY",
+    "default_priority": "%guy_attack_priority",
     "inputs": {
-        "job:target": {
-            "required": true
-        }
+        "job:target": {}
     },
     "tasks": [
         "#Start",

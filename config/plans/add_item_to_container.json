@@ -14,7 +14,8 @@
         ],
         [
             "RemoveFrom",
-            "$job:source"
+            "$job:source",
+            "$job:source_entity_type"
         ],
         [
             "MoveTo",
@@ -47,6 +48,10 @@
         [
             "AddTo",
             "$job:target"
+        ],
+        [
+            "Animate",
+            "RESET"
         ]
     ]
 }

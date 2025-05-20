@@ -1,14 +1,67 @@
 {
     "GUY": {
+        "behavior": "base:guy",
         "icon": "res://assets/sprites/ui/icons/guy.png",
-        "scene": "res://scenes/entities/characters/Guy.tscn"
+        "scene": "res://scenes/entities/characters/Guy.tscn",
+        "equipment": {
+            "slots": [
+                "head",
+                "left_hand",
+                "right_hand"
+            ],
+            "renderers": {
+                "HAT": {
+                    "scene": "res://scenes/vfx/equipment/HatRenderer.tscn",
+                    "params": {
+                        "offset": {
+                            "x": 0,
+                            "y": -21
+                        }
+                    }
+                }
+            }
+        }
     },
     "SKULLOS": {
+        "behavior": "base:enemy",
         "icon": "res://assets/sprites/ui/icons/skullos.png",
-        "scene": "res://scenes/entities/characters/enemies/Skullos.tscn"
+        "scene": "res://scenes/entities/characters/enemies/Skullos.tscn",
+        "equipment": {
+            "slots": [
+                "head"
+            ],
+            "renderers": {
+                "HAT": {
+                    "scene": "res://scenes/vfx/equipment/HatRenderer.tscn",
+                    "params": {
+                        "offset": {
+                            "x": 0,
+                            "y": -30
+                        }
+                    }
+                }
+            }
+        }
     },
     "SHELLTANK": {
+        "behavior": "base:shelltank",
         "icon": "res://assets/sprites/ui/icons/shelltank.png",
-        "scene": "res://scenes/entities/characters/enemies/Shelltank.tscn"
+        "scene": "res://scenes/entities/characters/enemies/Shelltank.tscn",
+        "equipment": {
+            "slots": [
+                "head"
+            ],
+            "renderers": {
+                "HAT": {
+                    "scene": "res://scenes/vfx/equipment/HatRenderer.tscn",
+                    "params": {
+                        "offset": {
+                            "x": 0,
+                            "y": -15
+                        }
+                    }
+                }
+            }
+        }
     }
 }

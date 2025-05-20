@@ -1,8 +1,8 @@
 {
     "castle_wall": {
         "icon": "res://assets/sprites/ui/build/wall.png",
-        "name_text": "castle_wall_name",
-        "description_text": "castle_wall_description",
+        "name_text": "base:castle_wall_name",
+        "description_text": "base:castle_wall_description",
         "center": {
             "x": 16,
             "y": 48
@@ -18,8 +18,8 @@
     },
     "dispenser": {
         "icon": "res://assets/sprites/ui/build/dispenser.png",
-        "name_text": "dispenser_name",
-        "description_text": "dispenser_description",
+        "name_text": "base:dispenser_name",
+        "description_text": "base:dispenser_description",
         "size": {
             "x": 2,
             "y": 2
@@ -39,8 +39,8 @@
     },
     "bakery": {
         "icon": "res://assets/sprites/ui/build/bakery.png",
-        "name_text": "bakery_name",
-        "description_text": "bakery_description",
+        "name_text": "base:bakery_name",
+        "description_text": "base:bakery_description",
         "center": {
             "x": 16,
             "y": 64
@@ -56,8 +56,8 @@
     },
     "outpost": {
         "icon": "res://assets/sprites/ui/build/outpost.png",
-        "name_text": "outpost_name",
-        "description_text": "outpost_description",
+        "name_text": "base:outpost_name",
+        "description_text": "base:outpost_description",
         "center": {
             "x": 16,
             "y": 144
@@ -73,8 +73,8 @@
     },
     "door": {
         "icon": "res://assets/sprites/ui/build/door.png",
-        "name_text": "door_name",
-        "description_text": "door_description",
+        "name_text": "base:door_name",
+        "description_text": "base:door_description",
         "center": {
             "x": 16,
             "y": 32

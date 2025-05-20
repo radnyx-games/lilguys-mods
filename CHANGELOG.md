@@ -2,16 +2,20 @@
 
 ## 0.0.4c
 
-- lil guys stay committed to bakeries if commanded
-- reduced expensive graphics API calls
+- reduced graphics lag, mining lag
+- reduced save time by 60%
+- reduced load time by 30%
 - F12 to take in-game screenshot
-- removed ability to destroy blocks outside playzone
-- much nicer error messages
-- fix: lil guys slow to react after getting hit
-- fix: lil guys dropping items through walls
-- fix: lil guys mysteriously quitting outpost job
-- fix: missing damaged wall texture
+- lil guys react faster after getting hit
+- permanent building assignments (Bakers!)
+- Shift+Click: select multiple guys
+- fix: lil guys getting distracted from outposts
 - fix: possible to game over on title screen
+- fix: lil guys dropping items through walls
+- fix: removed ability to destroy blocks outside play zone
+- mods: visible error messages
+- mods: survival game mode and king are entirely moddable
+- mods: lil guys can have specialized jobs
 
 ## 0.0.4b - 2024-11-25
 

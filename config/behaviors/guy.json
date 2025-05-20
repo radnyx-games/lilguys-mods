@@ -1,7 +1,7 @@
 {
     "behavior": [
         {
-            "description": "Pick up crown",
+            "description": "Take the crown",
             "conditions": [
                 [
                     "Detected",
@@ -10,19 +10,10 @@
                     "$crown"
                 ]
             ],
-            "plan": {
-                "name": "pickup_crown",
-                "tasks": [
-                    [
-                        "MoveTo",
-                        "$crown"
-                    ],
-                    [
-                        "RemoveFrom",
-                        "$crown"
-                    ]
-                ]
+            "inputs": {
+                "crown": "$crown"
             },
+            "plan": "base:take_crown",
             "priority": 14
         },
         {
@@ -31,7 +22,7 @@
                 [
                     "!Equal",
                     "Self",
-                    "King"
+                    "$global:king"
                 ],
                 [
                     "Detected",
@@ -47,7 +38,7 @@
             "inputs": {
                 "job:target": "$opp"
             },
-            "priority": "%GUY_ATTACK_PRIORITY"
+            "priority": "%guy_attack_priority"
         },
         {
             "description": "Evade bombs",
@@ -103,7 +94,7 @@
                 [
                     "Equal",
                     "Self",
-                    "King"
+                    "$global:king"
                 ],
                 [
                     "Detected",
@@ -129,7 +120,7 @@
             "conditions": [
                 [
                     "AwayFrom",
-                    "King",
+                    "$global:king",
                     160
                 ]
             ],
@@ -138,7 +129,7 @@
                 "tasks": [
                     [
                         "MoveTo",
-                        "King",
+                        "$global:king",
                         128
                     ]
                 ]

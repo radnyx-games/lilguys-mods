@@ -1,0 +1,6 @@
+{
+    "warp_to_king": {
+        "key": "base://inputs/warp_to_king_key.tres",
+        "text": "base:warp_to_king"
+    }
+}

@@ -1,8 +1,6 @@
 {
     "name": "base",
     "version": "0.0.4c",
-    "max_guy_count": 150,
-    "start_guy_count": 10,
     "world_size": 128,
     "build_menu": [
         "base:castle_wall",
@@ -11,7 +9,22 @@
         "base:door",
         "base:outpost"
     ],
-    "constants": {
-        "GUY_ATTACK_PRIORITY": 13
-    }
+    "scripts": [
+        "base://scripts/main.gd"
+    ],
+    "global_constants": {
+        "guy_attack_priority": 13,
+        "start_guy_count": 10
+    },
+    "teams": [
+        {
+            "name": "enemy",
+            "drop_items_on_destroy_tile": false
+        },
+        {
+            "name": "player",
+            "client": true,
+            "max_count": 150
+        }
+    ]
 }

@@ -1,11 +1,5 @@
 {
     "name": "guard",
-    "validate": [
-        [
-            "Exists",
-            "$job:target"
-        ]
-    ],
     "tasks": [
         "#Start",
         [

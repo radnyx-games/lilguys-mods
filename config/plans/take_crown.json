@@ -1,0 +1,17 @@
+{
+    "name": "take_crown",
+    "inputs": {
+        "crown": {}
+    },
+    "tasks": [
+        [
+            "MoveTo",
+            "$crown"
+        ],
+        [
+            "Equip",
+            "head",
+            "$crown"
+        ]
+    ]
+}

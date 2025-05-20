@@ -3,51 +3,54 @@
         "icon": "res://assets/sprites/ui/icons/rock.png",
         "sprite": {
             "texture": "res://assets/sprites/entities/items/rocks.png",
-            "shader": "res://assets/shaders/Rock.gdshader",
             "hframes": 5,
-            "frame:RandomInt": [
-                1,
-                5
-            ],
-            "shader_params": {
-                "palette": "res://assets/sprites/palette.png",
-                "shift_hsv": {
-                    "x": 0.03,
-                    "y": -0.01,
-                    "z": -0.1
-                }
+            "frame": {
+                "min": 1,
+                "max": 5
             },
-            "prerender": {
-                "palette_index": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6
-                ]
+            "shader": {
+                "program": "res://assets/shaders/Rock.gdshader",
+                "params": {
+                    "palette": "res://assets/sprites/palette.png",
+                    "shift_hsv": {
+                        "x": 0.03,
+                        "y": -0.01,
+                        "z": -0.1
+                    }
+                },
+                "prerender": {
+                    "palette_index": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
             }
         }
     },
-    "CROWN": {
-        "sprite": {
-            "texture": "res://assets/sprites/entities/items/crown.png"
-        },
-        "addons": [
-            "res://scenes/entities/items/addons/CrownItemAddon.tscn",
-            "res://scenes/entities/items/addons/HatItemAddon.tscn"
-        ]
-    },
     "BOMB": {
         "icon": "res://assets/sprites/ui/icons/bomb.png",
+        "sprite": "res://scenes/entities/items/BombItemSprite.tscn"
+    },
+    "CROWN": {
         "sprite": {
-            "scene": "res://scenes/entities/items/BombItemSprite.tscn",
-            "texture": "res://assets/sprites/entities/items/bomb.png",
-            "hframes": 4
+            "texture": "base://sprites/crown.png"
         },
-        "addons": [
-            "res://scenes/entities/items/addons/BombItemAddon.tscn",
-            "res://scenes/entities/items/addons/PushByHurtboxItemAddon.tscn"
-        ]
+        "equipment": {
+            "renderer": {
+                "type": "HAT",
+                "textures": [
+                    "base://sprites/crown.png"
+                ]
+            },
+            "effects": [
+                [
+                    "SetJobTypes"
+                ]
+            ]
+        }
     }
 }
