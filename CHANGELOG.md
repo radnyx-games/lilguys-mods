@@ -5,16 +5,17 @@
 - reduced graphics lag, mining lag
 - reduced save time by 60%
 - reduced load time by 30%
-- F12 to take in-game screenshot
+- F12 to take screenshot
+- lil guys stay assigned to buildings if manually assigned
+- Shift+Click to select multiple guys
+- Shift+Right Click a building to cancel assigned workers
 - lil guys react faster after getting hit
-- permanent building assignments (Bakers!)
-- Shift+Click: select multiple guys
 - fix: lil guys getting distracted from outposts
 - fix: possible to game over on title screen
 - fix: lil guys dropping items through walls
 - fix: removed ability to destroy blocks outside play zone
 - mods: visible error messages
-- mods: survival game mode and king are entirely moddable
+- mods: base game mode and king are entirely moddable
 - mods: lil guys can have specialized jobs
 
 ## 0.0.4b - 2024-11-25
