@@ -6,6 +6,7 @@
 - Hold Shift during walk command to unassign lil guys from current job.
 - Hold Shift to select multiple guys.
 - Shift+Right Click a building to cancel assigned workers.
+- Assigning to buildings now only fills available slots. Hold Shift to override previous workers.
 - F12 to take screenshot.
 - Added VSync and borderless window graphics options.
 - Greatly reduced graphics lag and mining lag.
