@@ -2,21 +2,23 @@
 
 ## 0.0.4c
 
-- reduced graphics lag, mining lag
-- reduced save time by 60%
-- reduced load time by 30%
-- F12 to take screenshot
-- lil guys stay assigned to buildings if manually assigned
-- Shift+Click to select multiple guys
-- Shift+Right Click a building to cancel assigned workers
-- lil guys react faster after getting hit
-- fix: lil guys getting distracted from outposts
-- fix: possible to game over on title screen
-- fix: lil guys dropping items through walls
-- fix: removed ability to destroy blocks outside play zone
-- mods: visible error messages
-- mods: base game mode and king are entirely moddable
-- mods: lil guys can have specialized jobs
+- Lil guys stay assigned to buildings if manually assigned.
+- Hold Shift during walk command to unassign lil guys from current job.
+- Hold Shift to select multiple guys.
+- Shift+Right Click a building to cancel assigned workers.
+- F12 to take screenshot.
+- Added VSync and borderless window graphics options.
+- Greatly reduced graphics lag and mining lag.
+- Improved save time by 60%.
+- Improved load time by 30%.
+- Lil guys react faster after getting hit.
+- fix: Lil guys getting distracted from outposts.
+- fix: Possible to game over on title screen.
+- fix: Lil guys dropping items through walls.
+- fix: Removed ability to destroy blocks outside play zone.
+- mods: Visible error messages.
+- mods: Base game mode and king are entirely moddable.
+- mods: Lil guys can have specialized jobs.
 
 ## 0.0.4b - 2024-11-25
 
