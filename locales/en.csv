@@ -12,6 +12,7 @@ saved_game,Saved game!
 saved_screenshot,Screenshot saved!
 select_hint,Select
 command_hint,Command
+force_command_hint,Hold Shift to force command
 place_blueprint_hint,Place blueprint
 destroy_hint,Destroy
 cancel_hint,Cancel
