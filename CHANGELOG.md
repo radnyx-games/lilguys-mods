@@ -1,4 +1,10 @@
-## 0.0.4c
+## 0.0.4c - 2025-06-02
+
+This update improves quality of life for players and modders. The biggest change is that Lil guys stay assigned to buildings when you command them. Holding Shift while commanding gives you more specific control, like overriding workers, assigning to full dispensers, or running away from enemies. 
+
+Modders can enjoy writing GDScript to directly control entities. The whole concept of the King is defined in the configuration and script files. There are more helpful error messages, too.
+
+And finally, the game runs way smoother. Much of the graphics lag has been vanquished, so the game should run a bit better on older machines.
 
 ### Features
 
@@ -6,7 +12,7 @@
 - Hold Shift during walk command to unassign lil guys from current job.
 - Hold Shift to select multiple guys.
 - Shift + Right Click a building to cancel assigned workers.
-- Assigning to buildings now only fills available slots. Hold Shift to override previous workers.
+- Assigning to buildings only fills available slots. Hold Shift to override workers.
 - F12 to take screenshot.
 - Added VSync and borderless window graphics options.
 - Greatly reduced graphics lag and mining lag.
@@ -16,12 +22,14 @@
 - Raised destruction limit to 2000.
 
 ### Fixes
+
 - Lil guys getting distracted from outposts.
 - Possible to game over on title screen.
 - Lil guys dropping items through walls.
 - Removed ability to destroy blocks outside play zone.
 
 ### Modding
+
 - Visible error messages.
 - Base game mode and king are entirely moddable.
 - Lil guys can have specialized jobs.
