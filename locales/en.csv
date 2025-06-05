@@ -34,3 +34,6 @@ screenshot_binding,Screenshot
 warp_to_king,Warp to King
 reset_to_defaults,Reset to defaults
 back,Back
+volume_option,Volume
+graphics_options,Graphics
+controls_options,Controls

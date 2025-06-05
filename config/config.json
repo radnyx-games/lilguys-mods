@@ -13,8 +13,10 @@
         "base://scripts/main.gd"
     ],
     "global_constants": {
+        "start_guy_count": 10,
+        "walk_priority": 10,
         "guy_attack_priority": 13,
-        "start_guy_count": 10
+        "force_walk_priority": 14
     },
     "teams": [
         {

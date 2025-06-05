@@ -9,6 +9,10 @@ const CROWN_ENTITY: StringName = "base:CROWN"
 const PLAYER_TEAM: StringName = "base:player"
 const KING_GLOBAL_STATE: StringName = "global:king"
 const WARP_TO_KING_INPUT: StringName = "base:warp_to_king"
+const WALK_TARGET_STATE: StringName = "walk_target"
+const WALK_COMMAND_PLAN: StringName = "base:walk_command"
+const WALK_PRIORITY_CONSTANT: StringName = "walk_priority"
+const FORCE_WALK_PRIORITY_CONSTANT: StringName = "force_walk_priority"
 
 """
 Spawn group of Lil Guys and their King. Setup the camera.
@@ -84,3 +88,20 @@ static func _connect_events(api):
 	events.equip.connect(_on_equip)
 	events.spawn.connect(_on_spawn)
 	events.marker_entity_visible.connect(_on_marker_entity_visible)
+	events.command_to_position.connect(_on_command_to_position)
+
+static func _on_command_to_position(api, entities, position, is_forced):
+	var priority: int
+	if is_forced:
+		priority = api.config.get_constant(FORCE_WALK_PRIORITY_CONSTANT)
+	else:
+		priority = api.config.get_constant(WALK_PRIORITY_CONSTANT)
+
+	for entity in entities:
+		if is_forced:
+			entity.quit_job()
+		else:
+			entity.quit_task()
+		
+		entity.set_state(WALK_TARGET_STATE, position)
+		entity.assign_job(WALK_COMMAND_PLAN, priority)

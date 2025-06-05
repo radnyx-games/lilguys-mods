@@ -14,7 +14,7 @@
                 "crown": "$crown"
             },
             "plan": "base:take_crown",
-            "priority": 14
+            "priority": 15
         },
         {
             "description": "Attack an opponent",
@@ -30,7 +30,7 @@
                     250,
                     "$opp",
                     "--LimitedToTargetHealth",
-                    "--OnlyInSameRoom",
+                    "--InSameRoomUnlessGuarding",
                     "--Urgent"
                 ]
             ],
@@ -101,7 +101,7 @@
                     "OPPONENT",
                     250,
                     "$opp",
-                    "--OnlyInSameRoom"
+                    "--InSameRoom"
                 ]
             ],
             "plan": {

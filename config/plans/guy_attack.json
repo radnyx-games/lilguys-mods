@@ -1,6 +1,5 @@
 {
     "name": "guy_attack",
-    "default_priority": "%guy_attack_priority",
     "inputs": {
         "job:target": {}
     },
