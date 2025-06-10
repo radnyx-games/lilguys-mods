@@ -15,11 +15,10 @@ const WALK_PRIORITY_CONSTANT: StringName = "walk_priority"
 const FORCE_WALK_PRIORITY_CONSTANT: StringName = "force_walk_priority"
 
 """
+Called when the world is created.
 Spawn group of Lil Guys and their King. Setup the camera.
 """
-static func init(api):
-	_connect_events(api)
-
+static func init_world(api):
 	var util = api.util
 	var world = api.world
 
@@ -35,9 +34,15 @@ static func init(api):
 	api.camera.set_offset(center)
 
 """
+Called once when a world is created or loaded.
+"""
+static func play_game(api):
+	_connect_events(api)
+
+"""
 Game over!
 """
-static func end(api):
+static func end_game(api):
 	_pan_to_king(api)
 
 """
