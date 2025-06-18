@@ -55,7 +55,6 @@
         }
     },
     "SWORD": {
-        "icon": "res://assets/sprites/ui/icons/rock.png",
         "sprite": {
             "texture": "base://sprites/sword.png"
         },

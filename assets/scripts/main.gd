@@ -34,7 +34,6 @@ static func init_world(api):
 
 	for i in range(count):
 		var guy = world.spawn(GUY_ENTITY, center + util.get_random_vector2i(64), PLAYER_TEAM)
-		guy.equip("tool", "base:SWORD")
 	
 	var king = world.spawn(GUY_ENTITY, center, PLAYER_TEAM)
 	king.equip("head", CROWN_ENTITY)
@@ -76,7 +75,7 @@ static func _on_flee(api, character, from):
 	):
 		api.ui.marker.alert(character)
 
-static func _on_equip(api, character, item_type):
+static func _on_equip(api, character, item_type: StringName):
 	if item_type == CROWN_ENTITY:
 		_replace_king(api, character)
 		character.quit_job()
@@ -106,7 +105,7 @@ static func _connect_events(api):
 	events.marker_entity_visible.connect(_on_marker_entity_visible)
 	events.command_to_position.connect(_on_command_to_position)
 
-static func _on_command_to_position(api, entities, position, is_forced):
+static func _on_command_to_position(api, entities, position: Vector2i, is_forced: bool):
 	var priority: int
 	if is_forced:
 		priority = api.config.get_constant(FORCE_WALK_PRIORITY_CONSTANT)
@@ -121,3 +120,10 @@ static func _on_command_to_position(api, entities, position, is_forced):
 		
 		entity.set_state(WALK_TARGET_STATE, position)
 		entity.assign_job(WALK_COMMAND_PLAN, priority)
+
+
+# Custom cheat menu command. This will be removed.
+static func __spawn_knight_guy(api, position: Vector2i):
+	var world = api.world
+	var guy = world.spawn(GUY_ENTITY, position, PLAYER_TEAM)
+	guy.equip("tool", "base:SWORD")
