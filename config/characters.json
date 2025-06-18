@@ -4,21 +4,26 @@
         "icon": "res://assets/sprites/ui/icons/guy.png",
         "scene": "res://scenes/entities/characters/Guy.tscn",
         "equipment": {
-            "slots": [
-                "head",
-                "left_hand",
-                "right_hand"
-            ],
-            "renderers": {
-                "HAT": {
-                    "scene": "res://scenes/vfx/equipment/HatRenderer.tscn",
-                    "params": {
-                        "offset": {
-                            "x": 0,
-                            "y": -21
-                        }
-                    }
-                }
+            "slots": {
+                "head": {
+                    "HAT": "HatMarker"
+                },
+                "tool": {
+                    "SWORD": "SwordMarker"
+                },
+                "accessory": {}
+            }
+        },
+        "attacks": {
+            "PunchAttack": {
+                "default": true
+            },
+            "KickAttack": {
+                "velocity": 98304
+            },
+            "SwordAttack": {
+                "velocity": 32768,
+                "damage": 2
             }
         }
     },
@@ -27,19 +32,15 @@
         "icon": "res://assets/sprites/ui/icons/skullos.png",
         "scene": "res://scenes/entities/characters/enemies/Skullos.tscn",
         "equipment": {
-            "slots": [
-                "head"
-            ],
-            "renderers": {
-                "HAT": {
-                    "scene": "res://scenes/vfx/equipment/HatRenderer.tscn",
-                    "params": {
-                        "offset": {
-                            "x": 0,
-                            "y": -30
-                        }
-                    }
+            "slots": {
+                "head": {
+                    "HAT": "HatMarker"
                 }
+            }
+        },
+        "attacks": {
+            "Attack": {
+                "velocity": 32768
             }
         }
     },
@@ -48,19 +49,15 @@
         "icon": "res://assets/sprites/ui/icons/shelltank.png",
         "scene": "res://scenes/entities/characters/enemies/Shelltank.tscn",
         "equipment": {
-            "slots": [
-                "head"
-            ],
-            "renderers": {
-                "HAT": {
-                    "scene": "res://scenes/vfx/equipment/HatRenderer.tscn",
-                    "params": {
-                        "offset": {
-                            "x": 0,
-                            "y": -15
-                        }
-                    }
+            "slots": {
+                "head": {
+                    "HAT": "HatMarker"
                 }
+            }
+        },
+        "attacks": {
+            "Attack": {
+                "velocity": -10000
             }
         }
     }

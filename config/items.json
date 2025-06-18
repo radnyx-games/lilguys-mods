@@ -40,15 +40,47 @@
             "texture": "base://sprites/crown.png"
         },
         "equipment": {
-            "renderer": {
-                "type": "HAT",
-                "textures": [
-                    "base://sprites/crown.png"
-                ]
+            "renderers": {
+                "HAT": {
+                    "textures": [
+                        "base://sprites/crown.png"
+                    ]
+                }
             },
             "effects": [
                 [
                     "SetJobTypes"
+                ]
+            ]
+        }
+    },
+    "SWORD": {
+        "icon": "res://assets/sprites/ui/icons/rock.png",
+        "sprite": {
+            "texture": "base://sprites/sword.png"
+        },
+        "equipment": {
+            "renderers": {
+                "SWORD": {
+                    "textures": [
+                        "base://sprites/sword.png"
+                    ]
+                }
+            },
+            "effects": [
+                [
+                    "SetJobTypes",
+                    "GUARD"
+                ],
+                [
+                    "SetState",
+                    "$attack_plan",
+                    "base:sword_attack"
+                ],
+                [
+                    "SetState",
+                    "$job:default_attack",
+                    "SwordAttack"
                 ]
             ]
         }

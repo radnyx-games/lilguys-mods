@@ -6,11 +6,18 @@ Sets up the main survival game mode. Protect the crown!
 
 const GUY_ENTITY: StringName = "base:GUY"
 const CROWN_ENTITY: StringName = "base:CROWN"
+
 const PLAYER_TEAM: StringName = "base:player"
-const KING_GLOBAL_STATE: StringName = "global:king"
+
 const WARP_TO_KING_INPUT: StringName = "base:warp_to_king"
+
+const KING_GLOBAL_STATE: StringName = "global:king"
+const ATTACK_PLAN_STATE: StringName = "attack_plan"
 const WALK_TARGET_STATE: StringName = "walk_target"
+
 const WALK_COMMAND_PLAN: StringName = "base:walk_command"
+const GUY_ATTACK_PLAN: StringName = "base:guy_attack"
+
 const WALK_PRIORITY_CONSTANT: StringName = "walk_priority"
 const FORCE_WALK_PRIORITY_CONSTANT: StringName = "force_walk_priority"
 
@@ -26,7 +33,8 @@ static func init_world(api):
 	var center: Vector2i = api.util.get_map_size_in_pixels() / 2
 
 	for i in range(count):
-		world.spawn(GUY_ENTITY, center + util.get_random_vector2i(64), PLAYER_TEAM)
+		var guy = world.spawn(GUY_ENTITY, center + util.get_random_vector2i(64), PLAYER_TEAM)
+		guy.equip("tool", "base:SWORD")
 	
 	var king = world.spawn(GUY_ENTITY, center, PLAYER_TEAM)
 	king.equip("head", CROWN_ENTITY)
@@ -74,8 +82,11 @@ static func _on_equip(api, character, item_type):
 		character.quit_job()
 
 static func _on_spawn(api, entity):
-	if entity.get_type() == CROWN_ENTITY:
+	var type = entity.get_type()
+	if type == CROWN_ENTITY:
 		_replace_king(api, entity)
+	elif type == GUY_ENTITY:
+		entity.set_state(ATTACK_PLAN_STATE, GUY_ATTACK_PLAN)
 
 static func _replace_king(api, king):
 	var old_king = api.global_state.get(KING_GLOBAL_STATE)

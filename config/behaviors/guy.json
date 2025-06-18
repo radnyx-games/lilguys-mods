@@ -34,7 +34,7 @@
                     "--Urgent"
                 ]
             ],
-            "plan": "base:guy_attack",
+            "plan": "$attack_plan",
             "inputs": {
                 "job:target": "$opp"
             },

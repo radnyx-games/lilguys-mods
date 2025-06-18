@@ -24,7 +24,7 @@
         [
             "Attack",
             "$job:target",
-            "Punch"
+            "PunchAttack"
         ],
         [
             "Jump",
@@ -39,7 +39,7 @@
         [
             "Attack",
             "$job:target",
-            "Kick"
+            "KickAttack"
         ],
         [
             "Jump",
