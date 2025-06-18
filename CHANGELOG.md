@@ -10,7 +10,7 @@ And finally, the game runs way smoother. Much of the graphics lag is vanquished,
 
 - Lil guys stay assigned to buildings if manually assigned.
 - Hold Shift during walk command to unassign lil guys from current job.
-- Hold Shift to select more lil guys.
+- Hold Shift to add lil guys to the current selection.
 - Shift + Right Click a building to cancel assigned workers.
 - Assigning to buildings only fills available slots. Hold Shift to override workers.
 - Outpost guards can see enemies through doors.
