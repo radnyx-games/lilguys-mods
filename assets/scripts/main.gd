@@ -127,3 +127,4 @@ static func __spawn_knight_guy(api, position: Vector2i):
 	var world = api.world
 	var guy = world.spawn(GUY_ENTITY, position, PLAYER_TEAM)
 	guy.equip("tool", "base:SWORD")
+	guy.equip("accessory", "base:SHIELD")

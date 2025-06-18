@@ -83,5 +83,25 @@
                 ]
             ]
         }
+    },
+    "SHIELD": {
+        "sprite": {
+            "texture": "base://sprites/shield.png"
+        },
+        "equipment": {
+            "renderers": {
+                "SHIELD": {
+                    "textures": [
+                        "base://sprites/shield.png"
+                    ]
+                }
+            },
+            "effects": [
+                [
+                    "BuffMaxHealth",
+                    50
+                ]
+            ]
+        }
     }
 }

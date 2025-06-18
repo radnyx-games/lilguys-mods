@@ -3,6 +3,9 @@
         "behavior": "base:guy",
         "icon": "res://assets/sprites/ui/icons/guy.png",
         "scene": "res://scenes/entities/characters/Guy.tscn",
+        "stats": {
+            "hp": 3
+        },
         "equipment": {
             "slots": {
                 "head": {
@@ -11,7 +14,9 @@
                 "tool": {
                     "SWORD": "SwordMarker"
                 },
-                "accessory": {}
+                "accessory": {
+                    "SHIELD": "ShieldMarker"
+                }
             }
         },
         "attacks": {
@@ -31,6 +36,9 @@
         "behavior": "base:enemy",
         "icon": "res://assets/sprites/ui/icons/skullos.png",
         "scene": "res://scenes/entities/characters/enemies/Skullos.tscn",
+        "stats": {
+            "hp": 3
+        },
         "equipment": {
             "slots": {
                 "head": {
@@ -48,6 +56,9 @@
         "behavior": "base:shelltank",
         "icon": "res://assets/sprites/ui/icons/shelltank.png",
         "scene": "res://scenes/entities/characters/enemies/Shelltank.tscn",
+        "stats": {
+            "hp": 6
+        },
         "equipment": {
             "slots": {
                 "head": {

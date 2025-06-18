@@ -35,6 +35,9 @@
             "cost": {
                 "base:ROCK": 10
             }
+        },
+        "stats": {
+            "hp": 20
         }
     },
     "bakery": {
@@ -52,6 +55,9 @@
             "cost": {
                 "base:ROCK": 15
             }
+        },
+        "stats": {
+            "hp": 10
         }
     },
     "outpost": {
@@ -69,6 +75,9 @@
             "cost": {
                 "base:ROCK": 15
             }
+        },
+        "stats": {
+            "hp": 20
         }
     },
     "door": {
