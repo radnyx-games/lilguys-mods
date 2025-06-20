@@ -33,7 +33,7 @@ static func init_world(api):
 	var center: Vector2i = api.util.get_map_size_in_pixels() / 2
 
 	for i in range(count):
-		var guy = world.spawn(GUY_ENTITY, center + util.get_random_vector2i(64), PLAYER_TEAM)
+		world.spawn(GUY_ENTITY, center + util.get_random_vector2i(64), PLAYER_TEAM)
 	
 	var king = world.spawn(GUY_ENTITY, center, PLAYER_TEAM)
 	king.equip("head", CROWN_ENTITY)
@@ -47,26 +47,43 @@ static func play_game(api):
 	_connect_events(api)
 
 """
-Game over!
+Listen to game events to update the current King. 
 """
-static func end_game(api):
-	_pan_to_king(api)
+static func _connect_events(api):
+	var events = api.events
+	events.on_end_game(_pan_to_king)
+	events.on_input(_on_input)
+	events.on_flee(_on_flee)
+	events.on_marker_entity_visible(_on_marker_entity_visible)
+	events.on_command_to_position(_on_command_to_position)
 
-"""
-Handle custom inputs events.
-"""
-static func input(api, event: InputEvent):
-	if event.is_action_pressed(WARP_TO_KING_INPUT):
-		_pan_to_king(api)
-		api.get_viewport().set_input_as_handled()
+	# Called when an entity is spawned into the world for the first time.
+	events.on_spawn(GUY_ENTITY, func(_api, guy):
+		guy.set_state(ATTACK_PLAN_STATE, GUY_ATTACK_PLAN))
+
+	# Called when an entity is loaded, either after spawning or from a save file.
+	events.on_init(CROWN_ENTITY, func(_api, crown):
+		_replace_king(_api, crown))
+
+	# Called when a character equips the given item type.
+	events.on_equip(CROWN_ENTITY, func(_api, character):
+		_replace_king(_api, character)
+		character.quit_job())
+
+static func _replace_king(api, king):
+	var old_king = api.global_state.get(KING_GLOBAL_STATE)
+	api.ui.marker.remove(old_king)
+	api.ui.marker.add(king)
+	api.global_state.set(KING_GLOBAL_STATE, king)
 
 static func _pan_to_king(api):
 	var king = api.global_state.get(KING_GLOBAL_STATE)
 	api.camera.set_target(king.get_position())
 
-"""
-Listen to game events to update the current King. 
-"""
+static func _on_input(api, event: InputEvent):
+	if event.is_action_pressed(WARP_TO_KING_INPUT):
+		_pan_to_king(api)
+		api.get_viewport().set_input_as_handled()
 
 static func _on_flee(api, character, from):
 	if (
@@ -75,51 +92,18 @@ static func _on_flee(api, character, from):
 	):
 		api.ui.marker.alert(character)
 
-static func _on_equip(api, character, item_type: StringName):
-	if item_type == CROWN_ENTITY:
-		_replace_king(api, character)
-		character.quit_job()
-
-static func _on_spawn(api, entity):
-	var type = entity.get_type()
-	if type == CROWN_ENTITY:
-		_replace_king(api, entity)
-	elif type == GUY_ENTITY:
-		entity.set_state(ATTACK_PLAN_STATE, GUY_ATTACK_PLAN)
-
-static func _replace_king(api, king):
-	var old_king = api.global_state.get(KING_GLOBAL_STATE)
-	api.ui.marker.remove(old_king)
-	api.ui.marker.add(king)
-	api.global_state.set(KING_GLOBAL_STATE, king)
-
 static func _on_marker_entity_visible(api, entity, is_visible):
 	if entity == api.global_state.get(KING_GLOBAL_STATE):
 		api.ui.show_hint(WARP_TO_KING_INPUT, not is_visible)
 
-static func _connect_events(api):
-	var events = api.events
-	events.flee.connect(_on_flee)
-	events.equip.connect(_on_equip)
-	events.spawn.connect(_on_spawn)
-	events.marker_entity_visible.connect(_on_marker_entity_visible)
-	events.command_to_position.connect(_on_command_to_position)
-
-static func _on_command_to_position(api, entities, position: Vector2i, is_forced: bool):
-	var priority: int
-	if is_forced:
-		priority = api.config.get_constant(FORCE_WALK_PRIORITY_CONSTANT)
-	else:
-		priority = api.config.get_constant(WALK_PRIORITY_CONSTANT)
+static func _on_command_to_position(api, entities: Array, position: Vector2i, is_forced: bool):
+	var constant = FORCE_WALK_PRIORITY_CONSTANT if is_forced else WALK_PRIORITY_CONSTANT
+	var priority: int = api.config.get_constant(constant)
 
 	for entity in entities:
-		if is_forced:
-			entity.quit_job()
-		else:
-			entity.quit_task()
-		
+		if is_forced: entity.quit_job()
 		entity.set_state(WALK_TARGET_STATE, position)
-		entity.assign_job(WALK_COMMAND_PLAN, priority)
+		entity.set_plan(WALK_COMMAND_PLAN, priority)
 
 
 # Custom cheat menu command. This will be removed.
