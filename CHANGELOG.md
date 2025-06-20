@@ -1,4 +1,4 @@
-## 0.0.4c - 2025-06-17
+## 0.0.4c - 2025-06-19
 
 This update improves the quality of life for players and modders. The biggest change is that lil guys stay assigned to buildings if you command them. Holding Shift while commanding gives you fine-grained control, like overriding workers, assigning to full dispensers, and running away from combat. 
 
@@ -34,6 +34,7 @@ And finally, the game runs way smoother. Much of the graphics lag is vanquished,
 - Visible error messages.
 - Base game mode and king are entirely moddable.
 - Lil guys can have specialized jobs.
+- Added knight lil guys in the creative menu.
 
 ## 0.0.4b - 2024-11-25
 
