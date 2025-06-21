@@ -63,18 +63,17 @@ static func _connect_events(api):
 
 	# Called when an entity is loaded, either after spawning or from a save file.
 	events.on_init(CROWN_ENTITY, func(_api, crown):
-		_replace_king(_api, crown))
+		api.global_state.set(KING_GLOBAL_STATE, crown))
 
 	# Called when a character equips the given item type.
 	events.on_equip(CROWN_ENTITY, func(_api, character):
-		_replace_king(_api, character)
 		character.quit_job())
 
-static func _replace_king(api, king):
-	var old_king = api.global_state.get(KING_GLOBAL_STATE)
-	api.ui.marker.remove(old_king)
-	api.ui.marker.add(king)
-	api.global_state.set(KING_GLOBAL_STATE, king)
+	# Called when we update the king entity in the global state.
+	events.on_global_state_changed(KING_GLOBAL_STATE, func(_api, king):
+		var old_king = _api.global_state.get(KING_GLOBAL_STATE)
+		api.ui.marker.remove(old_king)
+		api.ui.marker.add(king))
 
 static func _pan_to_king(api):
 	var king = api.global_state.get(KING_GLOBAL_STATE)

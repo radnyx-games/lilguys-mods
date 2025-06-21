@@ -50,6 +50,11 @@
             "effects": [
                 [
                     "SetJobTypes"
+                ],
+                [
+                    "SetState",
+                    "$global:king",
+                    "Self"
                 ]
             ]
         }
