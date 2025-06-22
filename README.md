@@ -1,6 +1,6 @@
-# lilguys-base
+# lilguys-mods
 
-Base mod for Lil Guys.
+Base mods for Lil Guys.
 
 
 ### Metadata
