@@ -2,3 +2,5 @@
 *.translation
 *.uid
 *.aseprite
+*.zip
+.godot/
