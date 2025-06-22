@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="lilguys-base"
+config/name="lilguys-mods"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 
 [rendering]
