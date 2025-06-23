@@ -1,3 +1,11 @@
+## 0.0.4d - 2025-06-22
+
+Final fixes and improvements for version 0.0.4. By popular request, you can now place blueprints on top of solid blocks, and lil guys will destroy those blocks before building. 
+
+Managing building settings is also much easier. Right now these improvements only apply to Outposts, but it will come very handy in 0.0.5 with the addition of Dispenser filters, item crafting, and cannons.
+
+Finally, if you want to share your save file, you don't have to rummage through folders. You can export your world and it will appear next to the game.
+
 ## 0.0.4c - 2025-06-19
 
 This update improves the quality of life for players and modders. The biggest change is that lil guys stay assigned to buildings if you command them. Holding Shift while commanding gives you fine-grained control, like overriding workers, assigning to full dispensers, and running away from combat. 
