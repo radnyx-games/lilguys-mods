@@ -68,7 +68,8 @@
         },
         "attacks": {
             "Attack": {
-                "velocity": -10000
+                "velocity": -10000,
+                "damage": 2
             }
         }
     }
