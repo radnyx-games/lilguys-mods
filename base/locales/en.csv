@@ -11,8 +11,8 @@ outpost_description,Lil guys defend the surrounding area
 saved_game,Saved game!
 saved_screenshot,Screenshot saved!
 select_hint,Select
-command_hint,Command
-force_command_hint,Hold Shift to force command
+command_hint,Command lil guys to work
+force_command_hint,Force command and replace workers
 place_blueprint_hint,Place blueprint
 destroy_hint,Destroy
 cancel_hint,Cancel
