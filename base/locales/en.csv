@@ -17,6 +17,7 @@ place_blueprint_hint,Place blueprint
 destroy_hint,Destroy
 cancel_hint,Cancel
 deselect_hint,Deselect
+cancel_work_hint,Cancel work for a building or lil guys
 copy_hint,Copy blueprint
 right_click_cancel_binding,Right-click to cancel
 right_click_drag_camera_binding,Right-click to drag camera
