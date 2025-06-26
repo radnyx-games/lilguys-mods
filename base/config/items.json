@@ -46,17 +46,7 @@
                         "base://sprites/crown.png"
                     ]
                 }
-            },
-            "effects": [
-                [
-                    "SetJobTypes"
-                ],
-                [
-                    "SetState",
-                    "$global:king",
-                    "Self"
-                ]
-            ]
+            }
         }
     },
     "SWORD": {
@@ -70,23 +60,7 @@
                         "base://sprites/sword.png"
                     ]
                 }
-            },
-            "effects": [
-                [
-                    "SetJobTypes",
-                    "GUARD"
-                ],
-                [
-                    "SetState",
-                    "$attack_plan",
-                    "base:sword_attack"
-                ],
-                [
-                    "SetState",
-                    "$job:default_attack",
-                    "SwordAttack"
-                ]
-            ]
+            }
         }
     },
     "SHIELD": {
@@ -100,13 +74,7 @@
                         "base://sprites/shield.png"
                     ]
                 }
-            },
-            "effects": [
-                [
-                    "BuffMaxHealth",
-                    50
-                ]
-            ]
+            }
         }
     }
 }

@@ -29,9 +29,11 @@
                     "OPPONENT",
                     250,
                     "$opp",
-                    "--LimitedToTargetHealth",
-                    "--InSameRoomUnlessGuarding",
-                    "--Urgent"
+                    {
+                        "urgent": true,
+                        "limit_to_target_health": true,
+                        "same_room": "$is_passive"
+                    }
                 ]
             ],
             "plan": "$attack_plan",
@@ -80,8 +82,10 @@
                     [
                         "FleeFrom",
                         "$guy",
-                        40,
-                        "--Random"
+                        {
+                            "distance": 40,
+                            "random": true
+                        }
                     ]
                 ]
             },
@@ -101,7 +105,9 @@
                     "OPPONENT",
                     250,
                     "$opp",
-                    "--InSameRoom"
+                    {
+                        "same_room": true
+                    }
                 ]
             ],
             "plan": {
@@ -109,7 +115,10 @@
                 "tasks": [
                     [
                         "FleeFrom",
-                        "$opp"
+                        "$opp",
+                        {
+                            "same_room": true
+                        }
                     ]
                 ]
             },
