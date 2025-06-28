@@ -27,7 +27,7 @@
                 "velocity": 98304
             },
             "SwordAttack": {
-                "velocity": 32768,
+                "velocity": 65000,
                 "damage": 2
             }
         }
