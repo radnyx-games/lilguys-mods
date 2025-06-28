@@ -11,8 +11,8 @@ outpost_description,Lil guys defend the surrounding area
 saved_game,Saved game!
 saved_screenshot,Screenshot saved!
 select_hint,Select
-command_hint,Command lil guys to work
-force_command_hint,Force command and replace workers
+command_hint,Assign lil guys to work
+force_command_hint,Force assignment to a job
 place_blueprint_hint,Place blueprint
 destroy_hint,Destroy
 cancel_hint,Cancel
@@ -25,12 +25,14 @@ pan_camera_at_edge_binding,Pan camera at edge
 build_binding,Build
 next_tool_binding,Next tool
 prev_tool_binding,Prev tool
+ignore_binding,Disallow clicking lil guys
 camera_up_binding,Camera up
 camera_down_binding,Camera down
 camera_left_binding,Camera left
 camera_right_binding,Camera right
 camera_zoom_in_binding,Camera zoom in
 camera_zoom_out_binding,Camera zoom out
+fullscreen_binding,Fullscreen
 screenshot_binding,Screenshot
 warp_to_king,Warp to King
 reset_to_defaults,Reset to defaults
