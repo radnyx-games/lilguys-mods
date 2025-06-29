@@ -1,10 +1,24 @@
-## 0.0.4d - 2025-06-22
+## 0.0.4d - 2025-06-29
 
-Final fixes and improvements for version 0.0.4. By popular request, you can now place blueprints on top of solid blocks, and lil guys will destroy those blocks before building. 
+Better selection controls, bug fixes, and bug report button.
 
-Managing building settings is also much easier. Right now these improvements only apply to Outposts, but it will come very handy in 0.0.5 with the addition of Dispenser filters, item crafting, and cannons.
+### Features
 
-Finally, if you want to share your save file, you don't have to rummage through folders. You can export your world and it will appear next to the game.
+- Click on enemies to send lil guys to attack.
+- Hover over items to show who's coming to pick it up.
+- Better visual feedback when selecting entities.
+- Bug report button to easily export world with a screenshot.
+
+### Fixes
+
+- Knights poorly spacing attacks.
+- Knights not seeing enemies through doors.
+- Many other door bugs.
+
+### Modding
+
+- Added "on_dibs" script event when a worker is assigned a job.
+- Removed "effects" list in items config in favor of script events.
 
 ## 0.0.4c - 2025-06-19
 
