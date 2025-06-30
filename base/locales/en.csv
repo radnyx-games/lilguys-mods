@@ -9,7 +9,9 @@ door_description,Blocks passage of enemies
 outpost_name,Outpost
 outpost_description,Lil guys defend the surrounding area
 saved_game,Saved game!
+save_failed,Save failed!
 saved_screenshot,Screenshot saved!
+copied_to_clipboard,Copied to clipboard!
 select_hint,Select
 command_hint,Assign lil guys to work
 force_command_hint,Force assignment to a job
@@ -40,3 +42,5 @@ back,Back
 volume_option,Volume
 graphics_options,Graphics
 controls_options,Controls
+yes_button,Yes
+cancel_button,Cancel
