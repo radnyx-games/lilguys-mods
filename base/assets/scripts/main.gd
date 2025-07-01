@@ -107,6 +107,7 @@ static func _connect_equipment(events):
 static func _pan_to_king(api):
     var king = api.global_state.get(KING_GLOBAL_STATE)
     api.camera.set_target(king.get_position())
+    api.input.select(king)
 
 static func _on_input(api, event: InputEvent):
     if event.is_action_pressed(WARP_TO_KING_INPUT):

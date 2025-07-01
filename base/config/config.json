@@ -1,6 +1,6 @@
 {
     "name": "base",
-    "version": "0.0.4d",
+    "version": "0.0.4e",
     "world_size": 128,
     "build_menu": [
         "base:castle_wall",
