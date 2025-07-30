@@ -1,6 +1,6 @@
-## 0.0.4e - 2025-07-29
+## 0.0.4e - 2025-07-30
 
-Menu overhaul, blueprint improvement
+Menu overhauls and blueprint improvements. This is all in preparation for cannons and item crafting.
 
 ### Features
 
@@ -11,6 +11,8 @@ Menu overhaul, blueprint improvement
 - Lil Guy menu, with editable random name.
 - Outposts can filter by basic or fighter class.
 - Building settings can be changed from the blueprint.
+- Building settings can be copy and pasted.
+- Buildings keep settings when destroyed by enemies.
 
 ### Modding
 
