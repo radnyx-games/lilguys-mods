@@ -36,6 +36,7 @@
         "sprite": "res://scenes/entities/items/BombItemSprite.tscn"
     },
     "CROWN": {
+        "icon": "base://sprites/crown_icon.png",
         "sprite": {
             "texture": "base://sprites/crown.png"
         },
@@ -50,6 +51,7 @@
         }
     },
     "SWORD": {
+        "icon": "base://sprites/sword_icon.png",
         "sprite": {
             "texture": "base://sprites/sword.png"
         },
@@ -64,6 +66,7 @@
         }
     },
     "SHIELD": {
+        "icon": "base://sprites/shield_icon.png",
         "sprite": {
             "texture": "base://sprites/shield.png"
         },

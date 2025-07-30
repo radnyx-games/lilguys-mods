@@ -1,25 +1,25 @@
 {
     "tiles": {
-        "solid_empty": {
+        "SOLID_EMPTY": {
             "terrains": {
                 "default": "base:solid_empty"
             }
         },
-        "castle_wall": {
+        "CASTLE_WALL": {
             "terrains": {
                 "default": "base:castle_wall",
                 "damaged": "base:castle_wall_damaged"
             },
             "hp": 10
         },
-        "cave_wall": {
+        "CAVE_WALL": {
             "terrains": {
                 "default": "base:cave_wall",
                 "damaged": "base:cave_wall_damaged"
             },
             "hp": 5
         },
-        "door": {
+        "DOOR": {
             "terrains": {
                 "default": "base:door"
             },

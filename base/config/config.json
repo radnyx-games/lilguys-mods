@@ -2,22 +2,9 @@
     "name": "base",
     "version": "0.0.4e",
     "world_size": 128,
-    "build_menu": [
-        "base:castle_wall",
-        "base:dispenser",
-        "base:bakery",
-        "base:door",
-        "base:outpost"
-    ],
     "scripts": [
         "base://scripts/main.gd"
     ],
-    "global_constants": {
-        "start_guy_count": 10,
-        "walk_priority": 10,
-        "guy_attack_priority": 13,
-        "force_walk_priority": 14
-    },
     "teams": [
         {
             "name": "enemy",
@@ -29,6 +16,37 @@
             "max_count": 150
         }
     ],
+    "constants": {
+        "start_guy_count": 10,
+        "walk_priority": 10,
+        "guy_attack_priority": 13,
+        "force_walk_priority": 14,
+        "bakery_recipes": {
+            "base:GUY": {
+                "base:ROCK": 5
+            },
+            "base:BOMB": {
+                "base:ROCK": 3
+            }
+        },
+        "bakery_menu": [
+            "base:GUY",
+            "base:BOMB"
+        ],
+        "build_menu": [
+            "base:CASTLE_WALL",
+            "base:DISPENSER",
+            "base:BAKERY",
+            "base:DOOR",
+            "base:OUTPOST"
+        ]
+    },
+    "icons": {
+        "BASIC_CLASS": "res://assets/sprites/ui/icons/guy.png",
+        "FIGHTER_CLASS": "res://assets/sprites/ui/icons/fighter.png",
+        "CASTLE_WALL": "res://assets/sprites/ui/build/wall.png",
+        "CAVE_WALL": "res://assets/sprites/ui/icons/cave_wall.png"
+    },
     "__debug": {
         "spawn_menu": [
             {

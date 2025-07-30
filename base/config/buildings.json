@@ -1,14 +1,13 @@
 {
-    "castle_wall": {
+    "CASTLE_WALL": {
         "icon": "res://assets/sprites/ui/build/wall.png",
-        "name_text": "base:castle_wall_name",
         "description_text": "base:castle_wall_description",
         "center": {
             "x": 16,
             "y": 48
         },
         "blueprint": {
-            "tile": "base:castle_wall",
+            "tile": "base:CASTLE_WALL",
             "texture": "res://assets/sprites/blueprints/wall.png",
             "placement_type": "DRAG_OUTLINE",
             "cost": {
@@ -16,10 +15,10 @@
             }
         }
     },
-    "dispenser": {
+    "DISPENSER": {
         "icon": "res://assets/sprites/ui/build/dispenser.png",
-        "name_text": "base:dispenser_name",
         "description_text": "base:dispenser_description",
+        "menu": "base:dispenser",
         "size": {
             "x": 2,
             "y": 2
@@ -38,12 +37,15 @@
         },
         "stats": {
             "hp": 20
+        },
+        "default_state": {
+            "allow_all": true
         }
     },
-    "bakery": {
+    "BAKERY": {
         "icon": "res://assets/sprites/ui/build/bakery.png",
-        "name_text": "base:bakery_name",
         "description_text": "base:bakery_description",
+        "menu": "base:bakery",
         "center": {
             "x": 16,
             "y": 64
@@ -58,12 +60,17 @@
         },
         "stats": {
             "hp": 10
+        },
+        "default_state": {
+            "entity_type": "base:GUY",
+            "limited": false,
+            "limit_count": 10
         }
     },
-    "outpost": {
+    "OUTPOST": {
         "icon": "res://assets/sprites/ui/build/outpost.png",
-        "name_text": "base:outpost_name",
         "description_text": "base:outpost_description",
+        "menu": "base:outpost",
         "center": {
             "x": 16,
             "y": 144
@@ -78,18 +85,21 @@
         },
         "stats": {
             "hp": 20
+        },
+        "default_state": {
+            "guard_limit": 10,
+            "class": "base:BASIC_CLASS"
         }
     },
-    "door": {
+    "DOOR": {
         "icon": "res://assets/sprites/ui/build/door.png",
-        "name_text": "base:door_name",
         "description_text": "base:door_description",
         "center": {
             "x": 16,
             "y": 32
         },
         "blueprint": {
-            "tile": "base:door",
+            "tile": "base:DOOR",
             "texture": "res://assets/sprites/blueprints/door.png",
             "placement_type": "CLICK",
             "cost": {

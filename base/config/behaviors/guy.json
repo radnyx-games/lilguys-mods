@@ -40,7 +40,7 @@
             "inputs": {
                 "job:target": "$opp"
             },
-            "priority": "%guy_attack_priority"
+            "priority": "%base:guy_attack_priority"
         },
         {
             "description": "Evade bombs",

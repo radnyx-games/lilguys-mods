@@ -1,12 +1,12 @@
-castle_wall_name,Wall
+tile,Tile
+item,Item
+monster,Monster
+building,Building
+blueprint,Blueprint
 castle_wall_description,Defensive structure
-dispenser_name,Dispenser
 dispenser_description,Stores items
-bakery_name,Bakery
 bakery_description,Produces lil guys
-door_name,Door
 door_description,Blocks passage of enemies
-outpost_name,Outpost
 outpost_description,Lil guys defend the surrounding area
 saved_game,Saved game!
 save_failed,Save failed!
@@ -44,3 +44,26 @@ graphics_options,Graphics
 controls_options,Controls
 yes_button,Yes
 cancel_button,Cancel
+bake_label,BAKE
+store_label,STORE
+class_label,CLASS
+limit_checkbox_label,limit:
+allow_all_checkbox_label,allow all
+
+GUY,Lil guy
+ROCK,Rock
+CROWN,Crown
+BOMB,Bomb
+SWORD,Sword
+SHIELD,Shield
+FIGHTER_ICON,Fighter
+CAVE_WALL,Cave Wall
+CASTLE_WALL,Castle Wall
+DOOR,Door
+DISPENSER,Dispenser
+BAKERY,Bakery
+OUTPOST,Outpost
+SKULLOS,Skullos
+SHELLTANK,Shelltank
+BASIC_CLASS,Basic lil guy
+FIGHTER_CLASS,Fighter lil guy

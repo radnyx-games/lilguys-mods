@@ -9,6 +9,9 @@ const CROWN_ENTITY: StringName = "base:CROWN"
 const SWORD_ENTITY: StringName = "base:SWORD"
 const SHIELD_ENTITY: StringName = "base:SHIELD"
 
+const BASIC_CLASS_TAG: StringName = "base:BASIC_CLASS"
+const FIGHTER_CLASS_TAG: StringName = "base:FIGHTER_CLASS"
+
 const PLAYER_TEAM: StringName = "base:player"
 
 const WARP_TO_KING_INPUT: StringName = "base:warp_to_king"
@@ -23,13 +26,12 @@ const WALK_COMMAND_PLAN: StringName = "base:walk_command"
 const GUY_ATTACK_PLAN: StringName = "base:guy_attack"
 const SWORD_ATTACK_PLAN: StringName = "base:sword_attack"
 
-const WALK_PRIORITY_CONSTANT: StringName = "walk_priority"
-const FORCE_WALK_PRIORITY_CONSTANT: StringName = "force_walk_priority"
+const WALK_PRIORITY_CONSTANT: StringName = "base:walk_priority"
+const FORCE_WALK_PRIORITY_CONSTANT: StringName = "base:force_walk_priority"
 
 const SWORD_ATTACK: StringName = "SwordAttack"
 
 const GUARD_JOB_TYPE: int = 3
-const FIGHTER_JOB_PREFERENCE: int = 1 << GUARD_JOB_TYPE
 
 """
 Called when the world is created.
@@ -39,7 +41,7 @@ static func init_world(api):
     var util = api.util
     var world = api.world
 
-    var count: int = api.config.get_constant("start_guy_count")
+    var count: int = api.config.get_constant("base:start_guy_count")
     var center: Vector2i = api.util.get_map_size_in_pixels() / 2
 
     for i in range(count):
@@ -56,6 +58,10 @@ Called once when a world is created or loaded.
 static func play_game(api):
     _connect_events(api.events)
 
+    # TODO: dynamically register class tags based on class category
+    api.repos.tag.register(BASIC_CLASS_TAG)
+    api.repos.tag.register(FIGHTER_CLASS_TAG)
+
 """
 Listen to game events to update the current King. 
 """
@@ -68,6 +74,7 @@ static func _connect_events(events):
 
     # Called when an entity is spawned into the world for the first time.
     events.on_spawn(GUY_ENTITY, func(api, guy):
+        guy.add_tag(BASIC_CLASS_TAG)
         guy.set_state(ATTACK_PLAN_STATE, GUY_ATTACK_PLAN)
         guy.set_state(IS_PASSIVE_STATE, true))
 
@@ -82,21 +89,22 @@ static func _connect_events(events):
         api.ui.marker.add(king))
 
     events.on_dibs(func(api, worker, job):
-        var is_fighter = worker.get_job_preference() == FIGHTER_JOB_PREFERENCE
+        var is_fighter = worker.has_tag(FIGHTER_CLASS_TAG)
         var is_guarding = job != null and job.get_job_type() == GUARD_JOB_TYPE
         worker.set_state(IS_PASSIVE_STATE, not (is_fighter or is_guarding)))
 
     _connect_equipment(events)
-
+ 
 # Called when a character equips the given item type.
 static func _connect_equipment(events):
     events.on_equip(CROWN_ENTITY, func(api, character):
-        character.set_job_preference(0)
+        character.remove_tag(BASIC_CLASS_TAG)
         character.quit_job()
         api.global_state.set(KING_GLOBAL_STATE, character))
 
     events.on_equip(SWORD_ENTITY, func(api, character):
-        character.set_job_preference(FIGHTER_JOB_PREFERENCE)
+        character.remove_tag(BASIC_CLASS_TAG)
+        character.add_tag(FIGHTER_CLASS_TAG)
         character.set_state(ATTACK_PLAN_STATE, SWORD_ATTACK_PLAN)
         character.set_state(DEFAULT_ATTACK_STATE, SWORD_ATTACK)
         character.set_state(IS_PASSIVE_STATE, false))

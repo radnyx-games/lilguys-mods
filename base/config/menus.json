@@ -1,0 +1,544 @@
+{
+    "build": {
+        "variations": [
+            "BUILD"
+        ],
+        "elements": [
+            {
+                "id": "row",
+                "type": "LIST_ROW",
+                "separation": "LARGE",
+                "element": {
+                    "type": "ICON",
+                    "size": "LARGE",
+                    "pressable": true
+                }
+            }
+        ]
+    },
+    "guy": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW"
+        ],
+        "can_click_outside": true,
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "id": "title",
+                                "type": "LABEL",
+                                "text": "Goober",
+                                "mutable": true
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:GUY",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "icon",
+                        "type": "ICON",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR"
+            }
+        ]
+    },
+    "enemy": {
+        "variations": [
+            "PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "id": "title",
+                                "type": "LABEL"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:monster",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "icon",
+                        "type": "ICON",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR"
+            }
+        ]
+    },
+    "item": {
+        "variations": [
+            "PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "id": "title",
+                                "type": "LABEL"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:item",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "icon",
+                        "type": "ICON",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true
+                    }
+                ]
+            }
+        ]
+    },
+    "tile": {
+        "variations": [
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "id": "title",
+                                "type": "LABEL"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:tile",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "icon",
+                        "type": "ICON",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            }
+        ]
+    },
+    "dispenser": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "type": "LABEL",
+                                "text": "base:DISPENSER"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:building",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK",
+                                "hide_in_variations": [
+                                    "PREVIEW"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ICON",
+                        "default": "base:DISPENSER",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "hide_in_variations": [
+                            "PREVIEW"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            },
+            {
+                "margin_top": "SMALL",
+                "id": "total_count",
+                "type": "COUNTER",
+                "icon": {
+                    "default": "base:ROCK",
+                    "size": "SMALL"
+                },
+                "limit": {}
+            },
+            {
+                "type": "DIVIDER"
+            },
+            {
+                "id": "allow_all",
+                "type": "CHECKBOX",
+                "elements": [
+                    {
+                        "type": "LABEL",
+                        "text": "base:allow_all_checkbox_label"
+                    }
+                ]
+            }
+        ]
+    },
+    "dispenser_selection": {
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "LABEL",
+                        "text": "base:store_label",
+                        "align": "CENTER"
+                    }
+                ]
+            },
+            {
+                "id": "list_col",
+                "type": "LIST_COLUMN",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "element": {
+                    "id": "list_row",
+                    "type": "LIST_ROW",
+                    "element": {
+                        "type": "ICON",
+                        "default": "base:ROCK",
+                        "size": "LARGE",
+                        "pressable": true
+                    }
+                }
+            }
+        ]
+    },
+    "bakery": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "type": "LABEL",
+                                "text": "base:BAKERY"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:building",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK",
+                                "hide_in_variations": [
+                                    "PREVIEW"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ICON",
+                        "default": "base:BAKERY",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "hide_in_variations": [
+                            "PREVIEW"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            },
+            {
+                "type": "ROW",
+                "margin_top": "SMALL",
+                "separation": "LARGE",
+                "elements": [
+                    {
+                        "id": "entity_type",
+                        "type": "ICON",
+                        "default": "base:GUY",
+                        "pressable": true,
+                        "size": "MEDIUM"
+                    },
+                    {
+                        "id": "requirements",
+                        "type": "LIST_COLUMN",
+                        "element": {
+                            "type": "COUNTER",
+                            "separation": "MEDIUM",
+                            "icon": {},
+                            "limit": {}
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "DIVIDER"
+            },
+            {
+                "id": "limited",
+                "type": "CHECKBOX",
+                "elements": [
+                    {
+                        "type": "LABEL",
+                        "text": "base:limit_checkbox_label"
+                    },
+                    {
+                        "id": "limit_count",
+                        "type": "NUMBER_LABEL",
+                        "default": 10,
+                        "mutable": true,
+                        "margin_left": "SMALL"
+                    }
+                ]
+            }
+        ]
+    },
+    "bakery_selection": {
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "LABEL",
+                        "text": "base:bake_label",
+                        "align": "CENTER"
+                    }
+                ]
+            },
+            {
+                "id": "list_col",
+                "type": "LIST_COLUMN",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "align": "CENTER",
+                "element": {
+                    "id": "list_row",
+                    "type": "LIST_ROW",
+                    "element": {
+                        "type": "ICON",
+                        "size": "LARGE",
+                        "pressable": true
+                    }
+                }
+            }
+        ]
+    },
+    "outpost": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "type": "LABEL",
+                                "text": "base:OUTPOST"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:building",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK",
+                                "hide_in_variations": [
+                                    "PREVIEW"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ICON",
+                        "default": "base:OUTPOST",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "hide_in_variations": [
+                            "PREVIEW"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            },
+            {
+                "id": "guard_count",
+                "type": "COUNTER",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "padding": "EXTRA_LARGE",
+                "icon": {
+                    "pressable": true,
+                    "default": "base:GUY",
+                    "size": "MEDIUM"
+                },
+                "limit": {
+                    "mutable": true,
+                    "default": 10,
+                    "max": 20
+                }
+            },
+            {
+                "id": "slider",
+                "type": "SLIDER",
+                "min": 0,
+                "max": 20,
+                "hide_in_variations": [
+                    "PREVIEW",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            }
+        ]
+    },
+    "outpost_selection": {
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "LABEL",
+                        "text": "base:class_label",
+                        "align": "CENTER"
+                    }
+                ]
+            },
+            {
+                "id": "list_col",
+                "type": "LIST_COLUMN",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "align": "CENTER",
+                "element": {
+                    "id": "list_row",
+                    "type": "LIST_ROW",
+                    "element": {
+                        "type": "ICON",
+                        "size": "LARGE",
+                        "pressable": true
+                    }
+                }
+            }
+        ]
+    }
+}
