@@ -1,3 +1,21 @@
+## 0.0.4e - 2025-07-29
+
+Menu overhaul, blueprint improvement
+
+### Features
+
+- Warping to the King with 'K' selects him.
+- Tile hover menu.
+- Item hover menu.
+- Enemy hover menu.
+- Lil Guy menu, with editable random name.
+- Outposts can filter by basic or fighter class.
+- Building settings can be changed from the blueprint.
+
+### Modding
+
+- Worker class is controlled by 'add_tag' and 'remove_tag' methods.
+
 ## 0.0.4d - 2025-06-29
 
 Better selection controls, bug fixes, and bug report button.
