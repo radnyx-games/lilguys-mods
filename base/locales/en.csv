@@ -27,7 +27,8 @@ pan_camera_at_edge_binding,Pan camera at edge
 build_binding,Build
 next_tool_binding,Next tool
 prev_tool_binding,Prev tool
-ignore_binding,Disallow clicking lil guys
+ignore_binding,Ignore clicking lil guys
+paste_binding,Paste building settings
 camera_up_binding,Camera up
 camera_down_binding,Camera down
 camera_left_binding,Camera left
