@@ -30,8 +30,7 @@
             }
         },
         "bakery_menu": [
-            "base:GUY",
-            "base:BOMB"
+            "base:GUY"
         ],
         "build_menu": [
             "base:CASTLE_WALL",
