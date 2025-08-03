@@ -32,6 +32,26 @@
             }
         }
     },
+    "SKULLET": {
+        "behavior": "base:enemy",
+        "icon": "res://assets/sprites/ui/icons/skullet.png",
+        "scene": "res://scenes/entities/characters/enemies/Skullet.tscn",
+        "stats": {
+            "hp": 2
+        },
+        "equipment": {
+            "slots": {
+                "head": {
+                    "HAT": "HatMarker"
+                }
+            }
+        },
+        "attacks": {
+            "Attack": {
+                "velocity": 32768
+            }
+        }
+    },
     "SKULLOS": {
         "behavior": "base:enemy",
         "icon": "res://assets/sprites/ui/icons/skullos.png",
@@ -48,7 +68,8 @@
         },
         "attacks": {
             "Attack": {
-                "velocity": 32768
+                "velocity": 32768,
+                "damage": 2
             }
         }
     },

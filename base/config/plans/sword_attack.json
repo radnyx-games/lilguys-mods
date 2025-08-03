@@ -6,9 +6,35 @@
     "tasks": [
         "#Start",
         [
+            "JumpIf",
+            [
+                [
+                    "AwayFrom",
+                    "$job:target",
+                    80
+                ]
+            ],
+            "#RunUp"
+        ],
+        [
             "MoveTo",
             "$job:target",
-            48
+            36
+        ],
+        [
+            "Attack",
+            "$job:target",
+            "SwordAttack"
+        ],
+        [
+            "Jump",
+            "#Start"
+        ],
+        "#RunUp",
+        [
+            "MoveTo",
+            "$job:target",
+            64
         ],
         [
             "Attack",

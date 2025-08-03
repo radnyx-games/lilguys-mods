@@ -23,7 +23,8 @@
         "force_walk_priority": 14,
         "bakery_recipes": {
             "base:GUY": {
-                "base:ROCK": 5
+                "base:ROCK": 5,
+                "base:ANIMA": 1
             },
             "base:BOMB": {
                 "base:ROCK": 3

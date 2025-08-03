@@ -57,6 +57,7 @@ CROWN,Crown
 BOMB,Bomb
 SWORD,Sword
 SHIELD,Shield
+ANIMA,Anima
 FIGHTER_ICON,Fighter
 CAVE_WALL,Cave Wall
 CASTLE_WALL,Castle Wall
@@ -65,6 +66,7 @@ DISPENSER,Dispenser
 BAKERY,Bakery
 OUTPOST,Outpost
 SKULLOS,Skullos
+SKULLET,Skullet
 SHELLTANK,Shelltank
 BASIC_CLASS,Basic lil guy
 FIGHTER_CLASS,Fighter lil guy
