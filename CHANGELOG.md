@@ -1,3 +1,5 @@
+## 0.0.5 - 2025-08-03
+
 ## 0.0.4e - 2025-07-30
 
 Menu overhauls and blueprint improvements. This is all in preparation for cannons and item crafting.
