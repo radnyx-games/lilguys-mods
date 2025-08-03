@@ -1,5 +1,12 @@
 ## 0.0.5 - 2025-08-03
 
+### Features
+
+- New starting enemy: Skullet.
+- New item: Anima, a life essence dropped by enemies.
+- Lil guys cost 3 Rocks and 1 Anima.
+- Skullos are stronger and break into 3 Skullets.
+
 ## 0.0.4e - 2025-07-30
 
 Menu overhauls and blueprint improvements. This is all in preparation for cannons and item crafting.
