@@ -12,15 +12,24 @@ saved_game,Saved game!
 save_failed,Save failed!
 saved_screenshot,Screenshot saved!
 copied_to_clipboard,Copied to clipboard!
+
+
 select_hint,Select
-command_hint,Assign lil guys to work
-force_command_hint,Force assignment to a job
+
+command_hint,Command lil guys
+force_command_hint,Force command
+
 place_blueprint_hint,Place blueprint
 destroy_hint,Destroy
 cancel_hint,Cancel
 deselect_hint,Deselect
-cancel_work_hint,Cancel work for a building or lil guys
+cancel_work_hint,Cancel lil guys' work
 copy_hint,Copy blueprint
+
+assign_job_hint,Assign lil guys to this job
+force_assign_job_hint,Force assign to this job
+cancel_work_on_job_hint,Cancel work on this job
+
 right_click_cancel_binding,Right-click to cancel
 right_click_drag_camera_binding,Right-click to drag camera
 pan_camera_at_edge_binding,Pan camera at edge
