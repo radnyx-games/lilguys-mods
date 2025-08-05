@@ -7,6 +7,13 @@
 - Lil guys cost 3 Rocks and 1 Anima.
 - Skullos are stronger and break into 3 Skullets.
 - Dispensers can filter items.
+- Control hints are clearer and more relevant.
+
+### Fixes
+
+- Graphical glitches when switching tools.
+- Warping to King breaks if not wearing the crown.
+- Issues with using tools outside the world boundaries.
 
 ## 0.0.4e - 2025-07-30
 
