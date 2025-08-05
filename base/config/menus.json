@@ -244,13 +244,48 @@
             },
             {
                 "margin_top": "SMALL",
+                "align": "RIGHT",
                 "id": "total_count",
                 "type": "COUNTER",
-                "icon": {
-                    "default": "base:ROCK",
-                    "size": "SMALL"
-                },
                 "limit": {}
+            },
+            {
+                "id": "storage",
+                "type": "LIST_COLUMN",
+                "separation": "MEDIUM",
+                "margin_top": "SMALL",
+                "element": {
+                    "type": "COUNTER",
+                    "separation": "LARGE",
+                    "icon": {
+                        "pressable": true,
+                        "default": "base:ROCK",
+                        "size": "SMALL"
+                    },
+                    "limit": {
+                        "mutable": true,
+                        "default": 50,
+                        "max": 50
+                    }
+                }
+            },
+            {
+                "type": "ROW",
+                "margin_top": "SMALL",
+                "elements": [
+                    {
+                        "id": "add_item",
+                        "type": "ICON",
+                        "pressable": true,
+                        "default": "base:PLUS_ICON",
+                        "size": "MEDIUM"
+                    }
+                ],
+                "hide_in_variations": [
+                    "PREVIEW",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
             },
             {
                 "type": "DIVIDER"
@@ -285,14 +320,10 @@
                 "margin_top": "SMALL",
                 "separation": "MEDIUM",
                 "element": {
-                    "id": "list_row",
-                    "type": "LIST_ROW",
-                    "element": {
-                        "type": "ICON",
-                        "default": "base:ROCK",
-                        "size": "LARGE",
-                        "pressable": true
-                    }
+                    "type": "ICON",
+                    "default": "base:ROCK",
+                    "size": "LARGE",
+                    "pressable": true
                 }
             }
         ]

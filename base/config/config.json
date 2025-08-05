@@ -33,6 +33,10 @@
         "bakery_menu": [
             "base:GUY"
         ],
+        "dispenser_menu": [
+            "base:ROCK",
+            "base:ANIMA"
+        ],
         "build_menu": [
             "base:CASTLE_WALL",
             "base:DISPENSER",
@@ -45,7 +49,9 @@
         "BASIC_CLASS": "res://assets/sprites/ui/icons/guy.png",
         "FIGHTER_CLASS": "res://assets/sprites/ui/icons/fighter.png",
         "CASTLE_WALL": "res://assets/sprites/ui/build/wall.png",
-        "CAVE_WALL": "res://assets/sprites/ui/icons/cave_wall.png"
+        "CAVE_WALL": "res://assets/sprites/ui/icons/cave_wall.png",
+        "PLUS_ICON": "res://assets/sprites/ui/icons/plus.png",
+        "X_ICON": "res://assets/sprites/ui/icons/x.png"
     },
     "__debug": {
         "spawn_menu": [

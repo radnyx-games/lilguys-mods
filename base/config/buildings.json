@@ -39,7 +39,8 @@
             "hp": 20
         },
         "default_state": {
-            "allow_all": true
+            "allow_all": true,
+            "limit": {}
         }
     },
     "BAKERY": {
