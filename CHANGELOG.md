@@ -1,9 +1,15 @@
-## 0.0.5 - 2025-08-04
+## 0.0.5 - 2025-08-05
+
+Skullets, Anima, and item sorting! This update fleshes out item management by adding a new basic resource, Anima: the essence of all living things. Lil Guys included. They're not merely crumbs of stone, but candy golems imbued with the souls of late critters. 
+
+Skullets are the new introductory monster. They're weak by themselves, but serve a challenge in crowds. Skullos now break into 3 Skullets, making the difficulty progression a lot smoother. Monsters drop Anima.
+
+With this new resource, you can now sort dispensers (thanks to the menu improvements from the last update). All in all, the cycle of monster drops, to storage, to crafting, to fighting, is starting to flesh out.
 
 ### Features
 
-- New starting enemy: Skullet.
-- New item: Anima, a life essence dropped by enemies.
+- New starting monster: Skullet.
+- New item: Anima, a life essence dropped by monster.
 - Lil guys cost 3 Rocks and 1 Anima.
 - Skullos are stronger and break into 3 Skullets.
 - Dispensers can filter items.
