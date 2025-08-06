@@ -1,6 +1,6 @@
 {
     "name": "base",
-    "version": "0.0.4e",
+    "version": "0.0.5",
     "world_size": 128,
     "scripts": [
         "base://scripts/main.gd"
