@@ -5,6 +5,7 @@
 - The depths of the cave are dark until lit.
 - Skullets drop a new item: Ember.
 - New building: Candle to light the darkness.
+- Default world size raised from 128x128 to 160x160.
 
 ### Fixes
 
