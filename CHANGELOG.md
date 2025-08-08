@@ -1,3 +1,15 @@
+## 0.0.6 - 2025-08-07
+
+### Features
+
+- The depths of the cave are dark until lit.
+- Skullets drop a new item: Ember.
+- New building: Candle to light the darkness.
+
+### Fixes
+
+- Removed crown from spawn menu.
+
 ## 0.0.5 - 2025-08-05
 
 Skullets, Anima, and item sorting! This update fleshes out item management by adding a new basic resource, Anima: the essence of all living things. Lil Guys included. They're not merely crumbs of stone, but candy golems imbued with the souls of late critters. 
