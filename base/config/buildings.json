@@ -127,6 +127,11 @@
         },
         "stats": {
             "hp": 10
+        },
+        "default_state": {
+            "r": true,
+            "g": true,
+            "b": true
         }
     }
 }

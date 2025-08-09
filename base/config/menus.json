@@ -625,6 +625,37 @@
                     "BLUEPRINT_PREVIEW",
                     "BUILD_PREVIEW"
                 ]
+            },
+            {
+                "type": "ROW",
+                "align": "CENTER",
+                "elements": [
+                    {
+                        "id": "red_icon",
+                        "type": "ICON",
+                        "default": "base:RED_ICON",
+                        "size": "MEDIUM",
+                        "pressable": true
+                    },
+                    {
+                        "id": "green_icon",
+                        "type": "ICON",
+                        "default": "base:GREEN_ICON",
+                        "size": "MEDIUM",
+                        "pressable": true
+                    },
+                    {
+                        "id": "blue_icon",
+                        "type": "ICON",
+                        "default": "base:BLUE_ICON",
+                        "size": "MEDIUM",
+                        "pressable": true
+                    }
+                ],
+                "hide_in_variations": [
+                    "PREVIEW",
+                    "BLUEPRINT_PREVIEW"
+                ]
             }
         ]
     }

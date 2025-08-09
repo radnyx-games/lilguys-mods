@@ -89,3 +89,9 @@ FIGHTER_CLASS,Fighter lil guy
 
 PLUS_ICON,Filter new item
 X_ICON,Remove
+RED_ICON,Red
+GREEN_ICON,Green
+BLUE_ICON,Blue
+NO_RED_ICON,Red
+NO_GREEN_ICON,Green
+NO_BLUE_ICON,Blue

@@ -53,7 +53,13 @@
         "CASTLE_WALL": "res://assets/sprites/ui/build/wall.png",
         "CAVE_WALL": "res://assets/sprites/ui/icons/cave_wall.png",
         "PLUS_ICON": "res://assets/sprites/ui/icons/plus.png",
-        "X_ICON": "res://assets/sprites/ui/icons/x.png"
+        "X_ICON": "res://assets/sprites/ui/icons/x.png",
+        "RED_ICON": "res://assets/sprites/ui/icons/red.png",
+        "GREEN_ICON": "res://assets/sprites/ui/icons/green.png",
+        "BLUE_ICON": "res://assets/sprites/ui/icons/blue.png",
+        "NO_RED_ICON": "res://assets/sprites/ui/icons/no_red.png",
+        "NO_GREEN_ICON": "res://assets/sprites/ui/icons/no_green.png",
+        "NO_BLUE_ICON": "res://assets/sprites/ui/icons/no_blue.png"
     },
     "__debug": {
         "spawn_menu": [
