@@ -571,5 +571,61 @@
                 }
             }
         ]
+    },
+    "candle": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "type": "LABEL",
+                                "text": "base:CANDLE"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:building",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK",
+                                "hide_in_variations": [
+                                    "PREVIEW"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ICON",
+                        "default": "base:CANDLE",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "hide_in_variations": [
+                            "PREVIEW"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            }
+        ]
     }
 }

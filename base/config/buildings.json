@@ -107,5 +107,26 @@
                 "base:ROCK": 8
             }
         }
+    },
+    "CANDLE": {
+        "icon": "res://assets/sprites/ui/build/candle.png",
+        "description_text": "base:candle_description",
+        "menu": "base:candle",
+        "center": {
+            "x": 16,
+            "y": 64
+        },
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Candle.tscn",
+            "texture": "res://assets/sprites/entities/buildings/candle.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 5,
+                "base:EMBER": 2
+            }
+        },
+        "stats": {
+            "hp": 10
+        }
     }
 }

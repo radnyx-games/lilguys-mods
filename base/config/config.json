@@ -1,7 +1,7 @@
 {
     "name": "base",
-    "version": "0.0.5",
-    "world_size": 128,
+    "version": "0.0.6",
+    "world_size": 160,
     "scripts": [
         "base://scripts/main.gd"
     ],
@@ -35,14 +35,16 @@
         ],
         "dispenser_menu": [
             "base:ROCK",
-            "base:ANIMA"
+            "base:ANIMA",
+            "base:EMBER"
         ],
         "build_menu": [
             "base:CASTLE_WALL",
             "base:DISPENSER",
             "base:BAKERY",
             "base:DOOR",
-            "base:OUTPOST"
+            "base:OUTPOST",
+            "base:CANDLE"
         ]
     },
     "icons": {

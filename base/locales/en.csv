@@ -8,6 +8,8 @@ dispenser_description,Stores items
 bakery_description,Produces lil guys
 door_description,Blocks passage of enemies
 outpost_description,Lil guys defend the surrounding area
+candle_description,Lights the darkness
+
 saved_game,Saved game!
 save_failed,Save failed!
 saved_screenshot,Screenshot saved!
@@ -60,24 +62,30 @@ class_label,CLASS
 limit_checkbox_label,limit:
 allow_all_checkbox_label,allow all
 
-GUY,Lil guy
+
 ROCK,Rock
 CROWN,Crown
 BOMB,Bomb
 SWORD,Sword
 SHIELD,Shield
 ANIMA,Anima
-FIGHTER_ICON,Fighter
+EMBER,Ember
+
 CAVE_WALL,Cave Wall
 CASTLE_WALL,Castle Wall
 DOOR,Door
 DISPENSER,Dispenser
 BAKERY,Bakery
 OUTPOST,Outpost
+CANDLE,Candle
+
+GUY,Lil guy
 SKULLOS,Skullos
 SKULLET,Skullet
 SHELLTANK,Shelltank
+
 BASIC_CLASS,Basic lil guy
 FIGHTER_CLASS,Fighter lil guy
+
 PLUS_ICON,Filter new item
 X_ICON,Remove
