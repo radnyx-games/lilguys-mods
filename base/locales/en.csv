@@ -7,7 +7,7 @@ castle_wall_description,Defensive structure
 dispenser_description,Stores items
 bakery_description,Produces lil guys
 door_description,Blocks passage of enemies
-outpost_description,Lil guys defend the surrounding area
+outpost_description,Lil guys defend\nthe surrounding area
 candle_description,Lights the darkness
 
 saved_game,Saved game!

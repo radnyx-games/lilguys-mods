@@ -1,7 +1,7 @@
 {
     "CASTLE_WALL": {
         "icon": "res://assets/sprites/ui/build/wall.png",
-        "description_text": "base:castle_wall_description",
+        "description": "base:castle_wall_description",
         "center": {
             "x": 16,
             "y": 48
@@ -17,7 +17,7 @@
     },
     "DISPENSER": {
         "icon": "res://assets/sprites/ui/build/dispenser.png",
-        "description_text": "base:dispenser_description",
+        "description": "base:dispenser_description",
         "menu": "base:dispenser",
         "size": {
             "x": 2,
@@ -45,7 +45,7 @@
     },
     "BAKERY": {
         "icon": "res://assets/sprites/ui/build/bakery.png",
-        "description_text": "base:bakery_description",
+        "description": "base:bakery_description",
         "menu": "base:bakery",
         "center": {
             "x": 16,
@@ -70,7 +70,7 @@
     },
     "OUTPOST": {
         "icon": "res://assets/sprites/ui/build/outpost.png",
-        "description_text": "base:outpost_description",
+        "description": "base:outpost_description",
         "menu": "base:outpost",
         "center": {
             "x": 16,
@@ -94,7 +94,7 @@
     },
     "DOOR": {
         "icon": "res://assets/sprites/ui/build/door.png",
-        "description_text": "base:door_description",
+        "description": "base:door_description",
         "center": {
             "x": 16,
             "y": 32
@@ -110,7 +110,7 @@
     },
     "CANDLE": {
         "icon": "res://assets/sprites/ui/build/candle.png",
-        "description_text": "base:candle_description",
+        "description": "base:candle_description",
         "menu": "base:candle",
         "center": {
             "x": 16,

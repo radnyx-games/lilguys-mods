@@ -79,8 +79,7 @@ static func _connect_events(events):
         guy.set_state(IS_PASSIVE_STATE, true))
 
     # Called when an entity is loaded, either after spawning or from a save file.
-    events.on_init(CROWN_ENTITY, func(api, crown):
-        api.global_state.set(KING_GLOBAL_STATE, crown))
+    events.on_init(CROWN_ENTITY, _set_king)
 
     # Called when we update the king entity in the global state.
     events.on_global_state_changed(KING_GLOBAL_STATE, func(api, king):
@@ -100,7 +99,7 @@ static func _connect_equipment(events):
     events.on_equip(CROWN_ENTITY, func(api, character):
         character.remove_tag(BASIC_CLASS_TAG)
         character.quit_job()
-        api.global_state.set(KING_GLOBAL_STATE, character))
+        _set_king(api, character))
 
     events.on_equip(SWORD_ENTITY, func(api, character):
         character.remove_tag(BASIC_CLASS_TAG)
@@ -111,6 +110,10 @@ static func _connect_equipment(events):
 
     events.on_equip(SHIELD_ENTITY, func(api, character):
         character.buff_max_health(50))
+
+static func _set_king(api, king):
+    api.world.set_destruction_center(PLAYER_TEAM, king)
+    api.global_state.set(KING_GLOBAL_STATE, king)
 
 static func _pan_to_king(api):
     var king = api.global_state.get(KING_GLOBAL_STATE)
