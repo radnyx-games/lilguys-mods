@@ -28,7 +28,7 @@
             "plan": "base:attack",
             "inputs": {
                 "attack": "Attack",
-                "distance": 36,
+                "distance": 40,
                 "job:target": "$opp"
             },
             "priority": 11
