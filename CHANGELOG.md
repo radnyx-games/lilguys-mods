@@ -1,15 +1,20 @@
-## 0.0.6 - 2025-08-07
+## 0.0.6 - 2025-08-10
 
 ### Features
 
 - The depths of the cave are dark until lit.
 - Skullets drop a new item: Ember.
 - New building: Candle to light the darkness.
+- Monsters are hidden in the darkness.
+- Lil guys give off a some light.
 - Default world size raised from 128x128 to 160x160.
+- Denser cave generation, with tunnels for monsters.
 
 ### Fixes
 
 - Removed crown from spawn menu.
+- Better destruction priority: Finds closest to King.
+- Enemies not able to escape from outside the play zone.
 
 ## 0.0.5 - 2025-08-05
 
