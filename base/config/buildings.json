@@ -118,7 +118,7 @@
         },
         "blueprint": {
             "scene": "res://scenes/entities/buildings/Candle.tscn",
-            "texture": "res://assets/sprites/entities/buildings/candle.png",
+            "texture": "res://assets/sprites/blueprints/candle.png",
             "placement_type": "CLICK",
             "cost": {
                 "base:ROCK": 5,
