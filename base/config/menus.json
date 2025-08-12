@@ -1,4 +1,44 @@
 {
+    "cluster": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "id": "title",
+                                "type": "LABEL",
+                                "text": "base:CLUSTER"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:resource",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "icon",
+                        "type": "ICON",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "default": "base:CLUSTER"
+                    }
+                ]
+            }
+        ]
+    },
     "build": {
         "variations": [
             "BUILD"

@@ -3,6 +3,7 @@ item,Item
 monster,Monster
 building,Building
 blueprint,Blueprint
+resource,Resource
 castle_wall_description,Defensive structure
 dispenser_description,Stores items
 bakery_description,Produces lil guys
@@ -78,6 +79,7 @@ DISPENSER,Dispenser
 BAKERY,Bakery
 OUTPOST,Outpost
 CANDLE,Candle
+CLUSTER,Cluster
 
 GUY,Lil guy
 SKULLOS,Skullos

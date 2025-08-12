@@ -5,6 +5,11 @@
                 "default": "base:solid_empty"
             }
         },
+        "HIDDEN_SOLID_EMPTY": {
+            "terrains": {
+                "default": "base:hidden_solid_empty"
+            }
+        },
         "CASTLE_WALL": {
             "terrains": {
                 "default": "base:castle_wall",
@@ -35,6 +40,14 @@
             },
             "type": "SINGLE"
         },
+        "hidden_solid_empty": {
+            "coords": {
+                "x": 2,
+                "y": 0
+            },
+            "type": "SINGLE",
+            "material": "res://assets/shaders/HiddenTileMaterial.tres"
+        },
         "castle_wall": {
             "coords": {
                 "x": 0,
@@ -54,14 +67,16 @@
                 "x": 0,
                 "y": 3
             },
-            "type": "BASIC_47"
+            "type": "BASIC_47",
+            "material": "res://assets/shaders/CaveMaterial.tres"
         },
         "cave_wall_damaged": {
             "coords": {
                 "x": 0,
                 "y": 8
             },
-            "type": "BASIC_47"
+            "type": "BASIC_47",
+            "material": "res://assets/shaders/CaveMaterial.tres"
         },
         "door": {
             "coords": {

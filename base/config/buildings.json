@@ -133,5 +133,23 @@
             "g": true,
             "b": true
         }
+    },
+    "CLUSTER": {
+        "resource": true,
+        "icon": "res://assets/sprites/ui/icons/rock.png",
+        "menu": "base:cluster",
+        "size": {
+            "x": 2,
+            "y": 2
+        },
+        "center": {
+            "x": 64,
+            "y": 96
+        },
+        "z_offset": 32,
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Cluster.tscn",
+            "texture": "res://assets/sprites/entities/buildings/cluster.png"
+        }
     }
 }
