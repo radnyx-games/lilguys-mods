@@ -1,14 +1,15 @@
-## 0.0.6 - 2025-08-10
+## 0.0.6 - 2025-08-12
 
 ### Features
 
-- The depths of the cave are dark until lit.
+- The caves are now dark until lit.
 - Skullets drop a new item: Ember.
-- New building: Candle to light the darkness.
+- New building to light the darkness: Candle.
 - Monsters are hidden in the darkness.
-- Lil guys give off a some light.
+- Lil guys and buildings emit some light.
+- New resource to farm rocks: Cluster.
 - Default world size raised from 128x128 to 160x160.
-- Denser cave generation, with tunnels for monsters.
+- Denser cave generation with tunnels for monsters.
 
 ### Fixes
 
