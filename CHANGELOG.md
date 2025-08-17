@@ -1,4 +1,8 @@
-## 0.0.6 - 2025-08-12
+## 0.0.6 - 2025-08-16
+
+The darkness now starts closer to the lil guys. Light the depths with candles! Candles can be crafted with Ember, a new item dropped by Skullets.
+
+Cave size has been slightly increased (10,000 more blocks). In the outskirts of the darkness, you will find Clusters, a steady source of Crumbs to help replenish your kingdom.
 
 ### Features
 
@@ -10,9 +14,11 @@
 - New resource to farm rocks: Cluster.
 - Default world size raised from 128x128 to 160x160.
 - Denser cave generation with tunnels for monsters.
+- Improve rock punch SFX.
 
 ### Fixes
 
+- Bakeries not working after dropping from lil guy limit.
 - Removed crown from spawn menu.
 - Better destruction priority: Finds closest to King.
 - Enemies not able to escape from outside the play zone.
