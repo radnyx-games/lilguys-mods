@@ -1,3 +1,5 @@
+## 0.0.7 - 2025-08-17
+
 ## 0.0.6 - 2025-08-16
 
 The darkness now starts closer to the lil guys. Light the depths with candles! Candles can be crafted with Ember, a new item dropped by Skullets.
