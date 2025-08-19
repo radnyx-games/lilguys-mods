@@ -4,7 +4,11 @@
 
 - Immortal skullets.
 
-## 0.0.7 - 2025-08-17
+## 0.0.7 - 2025-08-19
+
+### Features
+
+- Lil guys try to find items away from monsters.
 
 ## 0.0.6 - 2025-08-16
 
