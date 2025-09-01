@@ -9,6 +9,7 @@ const CROWN_ENTITY: StringName = "base:CROWN"
 const SWORD_ENTITY: StringName = "base:SWORD"
 const SHIELD_ENTITY: StringName = "base:SHIELD"
 
+const DAMAGED_TAG: StringName = "base:DAMAGED"
 const BASIC_CLASS_TAG: StringName = "base:BASIC_CLASS"
 const FIGHTER_CLASS_TAG: StringName = "base:FIGHTER_CLASS"
 
@@ -58,7 +59,8 @@ Called once when a world is created or loaded.
 static func play_game(api):
     _connect_events(api.events)
 
-    # TODO: dynamically register class tags based on class category
+    api.repos.tag.register(DAMAGED_TAG)
+
     api.repos.tag.register(BASIC_CLASS_TAG)
     api.repos.tag.register(FIGHTER_CLASS_TAG)
 
@@ -80,6 +82,12 @@ static func _connect_events(events):
 
     # Called when an entity is loaded, either after spawning or from a save file.
     events.on_init(CROWN_ENTITY, _set_king)
+
+    # An entity whose primary tag is `tag` is moved from the container of `from` to `to`.
+    events.on_transfer(func(api, from, to, tag):
+        # E.g., if a king puts themself into a Tub/Cannon/Compactor, that building is now the king.
+        if from == api.global_state.get(KING_GLOBAL_STATE) and tag == GUY_ENTITY:
+            _set_king(api, to))
 
     # Called when we update the king entity in the global state.
     events.on_global_state_changed(KING_GLOBAL_STATE, func(api, king):

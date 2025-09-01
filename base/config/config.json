@@ -20,7 +20,7 @@
         "start_guy_count": 10,
         "walk_priority": 10,
         "guy_attack_priority": 13,
-        "force_walk_priority": 14,
+        "force_walk_priority": 19,
         "bakery_recipes": {
             "base:GUY": {
                 "base:ROCK": 5,
@@ -44,7 +44,8 @@
             "base:BAKERY",
             "base:DOOR",
             "base:OUTPOST",
-            "base:CANDLE"
+            "base:CANDLE",
+            "base:TUB"
         ]
     },
     "icons": {
@@ -59,7 +60,12 @@
         "BLUE_ICON": "res://assets/sprites/ui/icons/blue.png",
         "NO_RED_ICON": "res://assets/sprites/ui/icons/no_red.png",
         "NO_GREEN_ICON": "res://assets/sprites/ui/icons/no_green.png",
-        "NO_BLUE_ICON": "res://assets/sprites/ui/icons/no_blue.png"
+        "NO_BLUE_ICON": "res://assets/sprites/ui/icons/no_blue.png",
+        "GUY_BLUE_ICON": "res://assets/sprites/ui/icons/guy_blue.png",
+        "GUY_YELLOW_ICON": "res://assets/sprites/ui/icons/guy_yellow.png",
+        "GUY_ORANGE_ICON": "res://assets/sprites/ui/icons/guy_orange.png",
+        "GUY_RED_ICON": "res://assets/sprites/ui/icons/guy_red.png",
+        "GUY_PURPLE_ICON": "res://assets/sprites/ui/icons/guy_purple.png"
     },
     "__debug": {
         "spawn_menu": [

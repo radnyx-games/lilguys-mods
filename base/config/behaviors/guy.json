@@ -14,7 +14,7 @@
                 "crown": "$crown"
             },
             "plan": "base:take_crown",
-            "priority": 15
+            "priority": 20
         },
         {
             "description": "Attack an opponent",

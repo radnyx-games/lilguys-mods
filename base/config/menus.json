@@ -1,4 +1,136 @@
 {
+    "tub": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "type": "LABEL",
+                                "text": "base:TUB"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:building",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK",
+                                "hide_in_variations": [
+                                    "PREVIEW"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ICON",
+                        "default": "base:TUB",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "hide_in_variations": [
+                            "PREVIEW"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            },
+            {
+                "id": "anima_count",
+                "type": "COUNTER",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "padding": "EXTRA_LARGE",
+                "icon": {
+                    "default": "base:ANIMA",
+                    "size": "SMALL"
+                },
+                "limit": {
+                    "default": 25
+                },
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            },
+            {
+                "id": "guy_count",
+                "type": "COUNTER",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "padding": "EXTRA_LARGE",
+                "icon": {
+                    "default": "base:GUY",
+                    "size": "SMALL"
+                },
+                "limit": {},
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW",
+                    "DEFAULT"
+                ]
+            },
+            {
+                "id": "guys",
+                "type": "LIST_COLUMN",
+                "margin_top": "MEDIUM",
+                "separation": "MEDIUM",
+                "element": {
+                    "type": "ROW",
+                    "elements": [
+                        {
+                            "id": "icon",
+                            "type": "ICON",
+                            "size": "MEDIUM",
+                            "pressable": true
+                        },
+                        {
+                            "type": "COLUMN",
+                            "separation": "SMALL",
+                            "elements": [
+                                {
+                                    "id": "name",
+                                    "type": "LABEL",
+                                    "size": "SMALL",
+                                    "color": "NEUTRAL_DARK"
+                                },
+                                {
+                                    "id": "healthbar",
+                                    "type": "HEALTHBAR"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW",
+                    "PREVIEW"
+                ]
+            }
+        ]
+    },
     "cluster": {
         "variations": [
             "DEFAULT",

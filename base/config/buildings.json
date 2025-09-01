@@ -151,5 +151,32 @@
             "scene": "res://scenes/entities/buildings/Cluster.tscn",
             "texture": "res://assets/sprites/entities/buildings/cluster.png"
         }
+    },
+    "TUB": {
+        "icon": "res://assets/sprites/ui/icons/rock.png",
+        "description": "base:tub_description",
+        "menu": "base:tub",
+        "tag_availability": true,
+        "size": {
+            "x": 3,
+            "y": 2
+        },
+        "center": {
+            "x": 48,
+            "y": 64
+        },
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Tub.tscn",
+            "texture": "res://assets/sprites/blueprints/tub.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 10,
+                "base:ANIMA": 10,
+                "base:EMBER": 10
+            }
+        },
+        "stats": {
+            "hp": 20
+        }
     }
 }

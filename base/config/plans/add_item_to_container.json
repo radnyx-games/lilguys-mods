@@ -33,6 +33,17 @@
             "#Add"
         ],
         [
+            "JumpIf",
+            [
+                [
+                    "Equal",
+                    "$job:is_commanded",
+                    false
+                ]
+            ],
+            "#Fail"
+        ],
+        [
             "Animate",
             "Wait"
         ],
@@ -52,6 +63,7 @@
         [
             "Animate",
             "RESET"
-        ]
+        ],
+        "#Fail"
     ]
 }

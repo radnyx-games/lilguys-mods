@@ -3,6 +3,7 @@
         "behavior": "base:guy",
         "icon": "res://assets/sprites/ui/icons/guy.png",
         "scene": "res://scenes/entities/characters/Guy.tscn",
+        "item_sprite": "res://scenes/entities/items/GuyItemSprite.tscn",
         "stats": {
             "hp": 3
         },

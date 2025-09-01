@@ -10,6 +10,7 @@ bakery_description,Produces lil guys
 door_description,Blocks passage of enemies
 outpost_description,Lil guys defend\nthe surrounding area
 candle_description,Lights the darkness
+tub_description,Recovers health\nof lil guys
 
 saved_game,Saved game!
 save_failed,Save failed!
@@ -80,6 +81,7 @@ BAKERY,Bakery
 OUTPOST,Outpost
 CANDLE,Candle
 CLUSTER,Cluster
+TUB,Tub
 
 GUY,Lil guy
 SKULLOS,Skullos
@@ -97,3 +99,8 @@ BLUE_ICON,Blue
 NO_RED_ICON,Red
 NO_GREEN_ICON,Green
 NO_BLUE_ICON,Blue
+GUY_BLUE_ICON,Lil guy
+GUY_YELLOW_ICON,Lil guy
+GUY_ORANGE_ICON,Lil guy
+GUY_RED_ICON,Lil guy
+GUY_PURPLE_ICON,Lil guy
