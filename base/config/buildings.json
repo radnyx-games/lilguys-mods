@@ -171,7 +171,6 @@
             "placement_type": "CLICK",
             "cost": {
                 "base:ROCK": 10,
-                "base:ANIMA": 10,
                 "base:EMBER": 10
             }
         },

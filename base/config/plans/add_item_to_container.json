@@ -27,7 +27,8 @@
             [
                 [
                     "!Full",
-                    "$job:target"
+                    "$job:target",
+                    "$job:source_entity_type"
                 ]
             ],
             "#Add"
