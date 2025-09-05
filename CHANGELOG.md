@@ -11,6 +11,7 @@
 - New building to heal lil guys: Cauldron. Requires Anima to refuel.
 - Lil guys try to find items away from monsters.
 - Increased time between rounds to help collect loot.
+- Bakery allows overfilling to improve crafting throughput.
 - Haul and guard jobs prefer healthy lil guys.
 
 ## 0.0.6 - 2025-08-16
