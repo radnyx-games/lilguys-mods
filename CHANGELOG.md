@@ -4,11 +4,13 @@
 
 - Immortal skullets.
 
-## 0.0.7 - 2025-08-19
+## 0.0.7 - 2025-09-04
 
 ### Features
 
+- New building to heal lil guys: Cauldron. Requires Anima to refuel.
 - Lil guys try to find items away from monsters.
+- Increased time between rounds to help collect loot.
 
 ## 0.0.6 - 2025-08-16
 
