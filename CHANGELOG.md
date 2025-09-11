@@ -4,7 +4,7 @@
 
 - Immortal skullets.
 
-## 0.0.7 - 2025-09-04
+## 0.0.7 - 2025-09-11
 
 ### Features
 
@@ -13,6 +13,10 @@
 - Increased time between rounds to help collect loot.
 - Bakery allows overfilling to improve crafting throughput.
 - Haul and guard jobs prefer healthy lil guys.
+
+### Modding
+
+- Added Hauler class and Satchel item to creative menu.
 
 ## 0.0.6 - 2025-08-16
 
