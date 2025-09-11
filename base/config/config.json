@@ -72,6 +72,10 @@
             {
                 "function": "__spawn_knight_guy",
                 "icon": "res://assets/sprites/ui/icons/guy.png"
+            },
+            {
+                "function": "__spawn_hauler_guy",
+                "icon": "res://assets/sprites/ui/icons/guy.png"
             }
         ]
     }

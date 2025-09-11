@@ -16,7 +16,8 @@
                     "SWORD": "SwordMarker"
                 },
                 "accessory": {
-                    "SHIELD": "ShieldMarker"
+                    "SHIELD": "ShieldMarker",
+                    "TORSO": "TorsoMarker"
                 }
             }
         },

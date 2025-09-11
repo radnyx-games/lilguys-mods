@@ -94,5 +94,20 @@
                 "max": 3
             }
         }
-    }
+    },
+    "SATCHEL": {
+        "icon": "base://sprites/satchel_icon.png",
+        "sprite": {
+            "texture": "base://sprites/satchel_item.png"
+        },
+        "equipment": {
+            "renderers": {
+                "TORSO": {
+                    "textures": [
+                        "base://sprites/satchel.png"
+                    ]
+                }
+            }
+        }
+    },
 }

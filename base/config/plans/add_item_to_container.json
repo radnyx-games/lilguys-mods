@@ -7,15 +7,15 @@
         ]
     ],
     "tasks": [
+        "#FindNext",
         [
-            "MoveTo",
+            "MoveTo?",
             "$job:source",
             56
         ],
         [
-            "RemoveFrom",
-            "$job:source",
-            "$job:source_entity_type"
+            "job:TakeFromSource",
+            "#FindNext"
         ],
         [
             "MoveTo",

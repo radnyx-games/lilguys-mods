@@ -8,10 +8,14 @@ const GUY_ENTITY: StringName = "base:GUY"
 const CROWN_ENTITY: StringName = "base:CROWN"
 const SWORD_ENTITY: StringName = "base:SWORD"
 const SHIELD_ENTITY: StringName = "base:SHIELD"
+const SATCHEL_ENTITY: StringName = "base:SATCHEL"
+
+const TUB_ENTITY: StringName = "base:TUB"
 
 const DAMAGED_TAG: StringName = "base:DAMAGED"
 const BASIC_CLASS_TAG: StringName = "base:BASIC_CLASS"
 const FIGHTER_CLASS_TAG: StringName = "base:FIGHTER_CLASS"
+const HAULER_CLASS_TAG: StringName = "base:HAULER_CLASS"
 
 const PLAYER_TEAM: StringName = "base:player"
 
@@ -63,6 +67,7 @@ static func play_game(api):
 
     api.repos.tag.register(BASIC_CLASS_TAG)
     api.repos.tag.register(FIGHTER_CLASS_TAG)
+    api.repos.tag.register(HAULER_CLASS_TAG)
 
 """
 Listen to game events to update the current King. 
@@ -73,10 +78,12 @@ static func _connect_events(events):
     events.on_flee(_on_flee)
     events.on_marker_entity_visible(_on_marker_entity_visible)
     events.on_command_to_position(_on_command_to_position)
+    events.on_command_to_building(_on_command_to_building)
 
     # Called when an entity is spawned into the world for the first time.
     events.on_spawn(GUY_ENTITY, func(api, guy):
         guy.add_tag(BASIC_CLASS_TAG)
+        guy.add_tag(HAULER_CLASS_TAG)
         guy.set_state(ATTACK_PLAN_STATE, GUY_ATTACK_PLAN)
         guy.set_state(IS_PASSIVE_STATE, true))
 
@@ -106,11 +113,13 @@ static func _connect_events(events):
 static func _connect_equipment(events):
     events.on_equip(CROWN_ENTITY, func(api, character):
         character.remove_tag(BASIC_CLASS_TAG)
+        character.remove_tag(HAULER_CLASS_TAG)
         character.quit_job()
         _set_king(api, character))
 
     events.on_equip(SWORD_ENTITY, func(api, character):
         character.remove_tag(BASIC_CLASS_TAG)
+        character.remove_tag(HAULER_CLASS_TAG)
         character.add_tag(FIGHTER_CLASS_TAG)
         character.set_state(ATTACK_PLAN_STATE, SWORD_ATTACK_PLAN)
         character.set_state(DEFAULT_ATTACK_STATE, SWORD_ATTACK)
@@ -118,6 +127,13 @@ static func _connect_equipment(events):
 
     events.on_equip(SHIELD_ENTITY, func(api, character):
         character.buff_max_health(50))
+
+    events.on_equip(SATCHEL_ENTITY, func(api, character):
+        # TODO: If a Bow tool is equipped, they should be a fighter.
+        # Unless it's a Lyre Bow, in which case they should be a healer.
+        character.remove_tag(BASIC_CLASS_TAG)
+        # TODO: organize component APIs like `character.container` and `character.health`.
+        character.set_container_max_limit(3))
 
 static func _set_king(api, king):
     api.world.set_destruction_center(PLAYER_TEAM, king)
@@ -154,10 +170,23 @@ static func _on_command_to_position(api, entities: Array, position: Vector2i, is
         entity.set_state(WALK_TARGET_STATE, position)
         entity.set_plan(WALK_COMMAND_PLAN, priority)
 
+static func _on_command_to_building(api, entities: Array, building, is_forced: bool):
+    if building.get_type() == TUB_ENTITY:
+        for entity in entities:
+            # The "base:DAMAGED" tag is added when their health drops below 35%.
+            # But if you player manually assigns them to heal, add the tag anyway.
+            # That way, if the Tub is currently full, they will later heal themselves.
+            if not entity.has_full_health():
+                entity.add_tag(DAMAGED_TAG)
 
-# Custom cheat menu command. This will be removed.
+# Custom cheat menu commands. These will be removed.
 static func __spawn_knight_guy(api, position: Vector2i):
     var world = api.world
     var guy = world.spawn(GUY_ENTITY, position, PLAYER_TEAM)
     guy.equip("tool", SWORD_ENTITY)
     guy.equip("accessory", SHIELD_ENTITY)
+
+static func __spawn_hauler_guy(api, position: Vector2i):
+    var world = api.world
+    var guy = world.spawn(GUY_ENTITY, position, PLAYER_TEAM)
+    guy.equip("accessory", SATCHEL_ENTITY)
