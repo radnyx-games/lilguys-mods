@@ -20,9 +20,9 @@
             "description": "Attack an opponent",
             "conditions": [
                 [
-                    "!Equal",
-                    "Self",
-                    "$global:king"
+                    "HasAnyTag",
+                    "base:BASIC_CLASS",
+                    "base:FIGHTER_CLASS"
                 ],
                 [
                     "Detected",
@@ -96,9 +96,9 @@
             "description": "Run away from enemies",
             "conditions": [
                 [
-                    "Equal",
-                    "Self",
-                    "$global:king"
+                    "!HasAnyTag",
+                    "base:BASIC_CLASS",
+                    "base:FIGHTER_CLASS"
                 ],
                 [
                     "Detected",
