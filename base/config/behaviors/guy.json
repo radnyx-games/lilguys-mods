@@ -61,7 +61,7 @@
                     ]
                 ]
             },
-            "priority": 12
+            "priority": 13
         },
         {
             "description": "Avoid clumps",
@@ -89,7 +89,7 @@
                     ]
                 ]
             },
-            "priority": 11,
+            "priority": 12,
             "every": 8
         },
         {
@@ -122,7 +122,7 @@
                     ]
                 ]
             },
-            "priority": 9
+            "priority": 10
         },
         {
             "description": "Defend the king",

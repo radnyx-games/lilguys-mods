@@ -26,7 +26,7 @@
                 "default": true
             },
             "KickAttack": {
-                "velocity": 98304
+                "velocity": 131070
             },
             "SwordAttack": {
                 "velocity": 65000,
@@ -92,6 +92,27 @@
         "attacks": {
             "Attack": {
                 "velocity": -10000,
+                "damage": 2
+            }
+        }
+    },
+    "ROCKWORM": {
+        "behavior": "base:rockworm",
+        "icon": "res://assets/sprites/ui/icons/rockworm.png",
+        "scene": "res://scenes/entities/characters/enemies/Rockworm.tscn",
+        "stats": {
+            "hp": 20
+        },
+        "equipment": {
+            "slots": {
+                "head": {
+                    "HAT": "HatMarker"
+                }
+            }
+        },
+        "attacks": {
+            "Attack": {
+                "velocity": 98304,
                 "damage": 2
             }
         }

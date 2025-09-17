@@ -14,7 +14,7 @@
                 "crown": "$crown"
             },
             "plan": "base:take_crown",
-            "priority": 11
+            "priority": 10
         },
         {
             "conditions": [
@@ -31,7 +31,7 @@
                 "distance": 40,
                 "job:target": "$opp"
             },
-            "priority": 11
+            "priority": 10
         },
         {
             "conditions": [

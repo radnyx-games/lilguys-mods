@@ -81,7 +81,7 @@ static func _connect_events(events):
     events.on_command_to_building(_on_command_to_building)
 
     # Called when an entity is spawned into the world for the first time.
-    events.on_spawn(GUY_ENTITY, func(api, guy):
+    events.on_spawn(GUY_ENTITY, func(_api, guy):
         guy.add_tag(BASIC_CLASS_TAG)
         guy.add_tag(HAULER_CLASS_TAG)
         guy.set_state(ATTACK_PLAN_STATE, GUY_ATTACK_PLAN)
@@ -102,7 +102,7 @@ static func _connect_events(events):
         api.ui.marker.remove(old_king)
         api.ui.marker.add(king))
 
-    events.on_dibs(func(api, worker, job):
+    events.on_dibs(func(_api, worker, job):
         var is_fighter = worker.has_tag(FIGHTER_CLASS_TAG)
         var is_guarding = job != null and job.get_job_type() == GUARD_JOB_TYPE
         worker.set_state(IS_PASSIVE_STATE, not (is_fighter or is_guarding)))
@@ -117,7 +117,7 @@ static func _connect_equipment(events):
         character.quit_job()
         _set_king(api, character))
 
-    events.on_equip(SWORD_ENTITY, func(api, character):
+    events.on_equip(SWORD_ENTITY, func(_api, character):
         character.remove_tag(BASIC_CLASS_TAG)
         character.remove_tag(HAULER_CLASS_TAG)
         character.add_tag(FIGHTER_CLASS_TAG)
@@ -125,10 +125,10 @@ static func _connect_equipment(events):
         character.set_state(DEFAULT_ATTACK_STATE, SWORD_ATTACK)
         character.set_state(IS_PASSIVE_STATE, false))
 
-    events.on_equip(SHIELD_ENTITY, func(api, character):
+    events.on_equip(SHIELD_ENTITY, func(_api, character):
         character.buff_max_health(50))
 
-    events.on_equip(SATCHEL_ENTITY, func(api, character):
+    events.on_equip(SATCHEL_ENTITY, func(_api, character):
         # TODO: If a Bow tool is equipped, they should be a fighter.
         # Unless it's a Lyre Bow, in which case they should be a healer.
         character.remove_tag(BASIC_CLASS_TAG)
@@ -170,7 +170,7 @@ static func _on_command_to_position(api, entities: Array, position: Vector2i, is
         entity.set_state(WALK_TARGET_STATE, position)
         entity.set_plan(WALK_COMMAND_PLAN, priority)
 
-static func _on_command_to_building(api, entities: Array, building, is_forced: bool):
+static func _on_command_to_building(_api, entities: Array, building, _is_forced: bool):
     if building.get_type() == TUB_ENTITY:
         for entity in entities:
             # The "base:DAMAGED" tag is added when their health drops below 35%.

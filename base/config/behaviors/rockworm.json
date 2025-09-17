@@ -1,0 +1,174 @@
+{
+	"behavior": [
+		{
+			"description": "Take the crown",
+			"conditions": [
+				[
+					"Detected",
+					"base:CROWN",
+					160,
+					"$crown"
+				]
+			],
+			"inputs": {
+				"crown": "$crown"
+			},
+			"plan": "base:take_crown",
+			"priority": 10,
+			"every": 8
+		},
+		{
+			"conditions": [
+				[
+					"Equal",
+					"Self",
+					"$global:king"
+				]
+			],
+			"plan": "base:escape_with_crown",
+			"priority": 7
+		},
+		{
+			"description": "Run away from enemies",
+			"conditions": [
+				[
+					"Detected",
+					"OPPONENT",
+					320,
+					"$opp",
+					{
+						"same_room": true
+					}
+				]
+			],
+			"plan": {
+				"name": "flee",
+				"tasks": [
+					[
+						"FleeFrom",
+						"$opp",
+						{
+							"same_room": true
+						}
+					]
+				]
+			},
+			"priority": 6,
+			"every": 4
+		},
+		{
+			"description": "Eat nearby items",
+			"conditions": [
+				[
+					"!Full",
+					"Self"
+				],
+				[
+					"Detected",
+					"ITEM",
+					240,
+					"$item",
+					{
+						"nearest": true
+					}
+				]
+			],
+			"plan": {
+				"name": "steal_item",
+				"tasks": [
+					[
+						"MoveTo",
+						"$item",
+						24
+					],
+					[
+						"RemoveFrom",
+						"$item"
+					],
+					[
+						"Animate",
+						"Eat"
+					],
+					[
+						"Wait",
+						10
+					]
+				]
+			},
+			"priority": 5
+		},
+		{
+			"description": "Spy items further away",
+			"conditions": [
+				[
+					"!Full",
+					"Self"
+				],
+				[
+					"Detected",
+					"ITEM",
+					"$item"
+				]
+			],
+			"plan": {
+				"name": "find_item",
+				"tasks": [
+					[
+						"MoveTo",
+						"$item"
+					]
+				]
+			},
+			"every": 4,
+			"priority": 4
+		},
+		{
+			"description": "Wander",
+			"plan": {
+				"name": "wander",
+				"tasks": [
+					[
+						"JumpIf",
+						[
+							[
+								"!Full",
+								"Self"
+							]
+						],
+						"#Random"
+					],
+					[
+						"FindClosestMapEdge",
+						"$edge"
+					],
+					[
+						"JumpIf",
+						[
+							[
+								"!Accessible",
+								"$edge"
+							]
+						],
+						"#Random"
+					],
+					[
+						"MoveTo",
+						"$edge"
+					],
+					[
+						"Delete"
+					],
+					"#MakePath",
+					[
+						"MakePathTo",
+						"$edge"
+					],
+					"#Random",
+					[
+						"MoveTo"
+					]
+				]
+			}
+		}
+	]
+}
