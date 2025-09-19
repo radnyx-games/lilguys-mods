@@ -4,11 +4,12 @@
 
 - Immortal skullets.
 
-## 0.0.7 - 2025-09-11
+## 0.0.7 - 2025-09-19
 
 ### Features
 
 - New building to heal lil guys: Cauldron. Requires Anima to refuel.
+- New monster: Rockworm. Steals items from the ground.
 - Lil guys try to find items away from monsters.
 - Increased time between rounds to help collect loot.
 - Bakery allows overfilling to improve crafting throughput.
