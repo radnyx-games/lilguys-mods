@@ -84,14 +84,6 @@
 					[
 						"RemoveFrom",
 						"$item"
-					],
-					[
-						"Animate",
-						"Eat"
-					],
-					[
-						"Wait",
-						10
 					]
 				]
 			},
