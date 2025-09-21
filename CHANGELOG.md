@@ -4,7 +4,15 @@
 
 - Immortal skullets.
 
-## 0.0.7 - 2025-09-19
+## 0.0.7 - 2025-09-20
+
+This update is all about looting.
+
+A key part of the game is collecting enemy loot (and reclaiming the crumbs of fallen lil guys). In the past, lil guys would often run directly into battle looking for loot. This caused a death-spiral of guys looking for loot, dying, and leaving yet more crumbs on the ground. A couple new features help fix this: There is more time between rounds to safely loot. Lil guys try avoiding items near monsters. And there is a new building, the Cauldron, which heals damaged lil guys.
+
+I also took the time to add a new secret class. the Hauler, who can carry 3 items at a time. You can try the Hauler out in the F4 creative menu. It will be craftable in a coming update. 
+
+And finally, a new monster, the Rockworm. The Rockworm steals items and tries to escape with them. The longer the Rockworm gets, the higher chance it converts crumbs into anima. In future updates, the Rockworm will have a chance to drop rare items.
 
 ### Features
 
@@ -14,6 +22,7 @@
 - Increased time between rounds to help collect loot.
 - Bakery allows overfilling to improve crafting throughput.
 - Haul and guard jobs prefer healthy lil guys.
+- Improved some graphics and sound effects.
 
 ### Modding
 
