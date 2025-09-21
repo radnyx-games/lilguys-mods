@@ -1,9 +1,3 @@
-## 0.0.6b - 2025-08-18
-
-### Fixes
-
-- Immortal skullets.
-
 ## 0.0.7 - 2025-09-20
 
 This update is all about looting.
@@ -27,6 +21,12 @@ And finally, a new monster, the Rockworm. The Rockworm steals items and tries to
 ### Modding
 
 - Added Hauler class and Satchel item to creative menu.
+
+## 0.0.6b - 2025-08-18
+
+### Fixes
+
+- Immortal skullets.
 
 ## 0.0.6 - 2025-08-16
 
