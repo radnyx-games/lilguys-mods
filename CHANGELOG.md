@@ -1,3 +1,10 @@
+## 0.0.8 - 2025-09-25
+
+### Features
+
+- Craftable bombs.
+- Title music.
+
 ## 0.0.7 - 2025-09-20
 
 This update is all about looting.
