@@ -53,7 +53,8 @@ screenshot_binding,Screenshot
 warp_to_king,Warp to King
 reset_to_defaults,Reset to defaults
 back,Back
-volume_option,Volume
+music_volume_option,Music Volume
+sfx_volume_option,SFX Volume
 graphics_options,Graphics
 controls_options,Controls
 yes_button,Yes
