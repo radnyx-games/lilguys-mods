@@ -6,7 +6,7 @@ blueprint,Blueprint
 resource,Resource
 castle_wall_description,Defensive structure
 dispenser_description,Stores items
-bakery_description,Produces lil guys
+bakery_description,Craft lil guys and\nother items
 door_description,Blocks passage of enemies
 outpost_description,Lil guys defend\nthe surrounding area
 candle_description,Lights the darkness

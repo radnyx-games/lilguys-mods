@@ -32,8 +32,13 @@
         }
     },
     "BOMB": {
+        "scene": "res://scenes/entities/items/Bomb.tscn",
         "icon": "res://assets/sprites/ui/icons/bomb.png",
-        "sprite": "res://scenes/entities/items/BombItemSprite.tscn"
+        "sprite": {
+            "texture": "res://assets/sprites/entities/items/bomb.png",
+            "hframes": 4,
+            "randomize_rotation": false
+        }
     },
     "CROWN": {
         "icon": "base://sprites/crown_icon.png",
@@ -82,7 +87,7 @@
     },
     "ANIMA": {
         "icon": "res://assets/sprites/ui/icons/anima.png",
-        "sprite": "res://scenes/entities/items/AnimaItemSprite.tscn"
+        "sprite": "res://scenes/vfx/AnimaItemSprite.tscn"
     },
     "EMBER": {
         "icon": "res://assets/sprites/ui/icons/ember.png",
@@ -109,5 +114,5 @@
                 }
             }
         }
-    },
+    }
 }

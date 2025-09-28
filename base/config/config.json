@@ -1,6 +1,6 @@
 {
     "name": "base",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "world_size": 160,
     "scripts": [
         "base://scripts/main.gd"
@@ -27,16 +27,19 @@
                 "base:ANIMA": 1
             },
             "base:BOMB": {
-                "base:ROCK": 3
+                "base:ROCK": 3,
+                "base:EMBER": 1
             }
         },
         "bakery_menu": [
-            "base:GUY"
+            "base:GUY",
+            "base:BOMB"
         ],
         "dispenser_menu": [
             "base:ROCK",
             "base:ANIMA",
-            "base:EMBER"
+            "base:EMBER",
+            "base:BOMB"
         ],
         "build_menu": [
             "base:CASTLE_WALL",

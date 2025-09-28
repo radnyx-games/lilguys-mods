@@ -49,7 +49,10 @@
                     "Detected",
                     "base:BOMB",
                     80,
-                    "$bomb"
+                    "$bomb",
+                    {
+                        "owned_by_opponent": true
+                    }
                 ]
             ],
             "plan": {
