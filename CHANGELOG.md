@@ -1,9 +1,11 @@
-## 0.0.8 - 2025-09-25
+## 0.0.8 - 2025-09-29
 
 ### Features
 
-- Craftable bombs.
+- New item: Shell. Dropped by Shelltanks.
+- Bombs can be crafted with Embers.
 - Title music.
+- SFX improvements.
 
 ## 0.0.7 - 2025-09-20
 
