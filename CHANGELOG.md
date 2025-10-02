@@ -1,8 +1,9 @@
-## 0.0.8 - 2025-09-29
+## 0.0.8 - 2025-10-02
 
 ### Features
 
 - New item: Shell. Dropped by Shelltanks.
+- New building: Cannon. Launches bombs.
 - Bombs can be crafted with Embers.
 - Title music.
 - SFX improvements.
