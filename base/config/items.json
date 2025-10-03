@@ -114,5 +114,11 @@
                 }
             }
         }
+    },
+    "SHELL": {
+        "icon": "res://assets/sprites/ui/icons/shell.png",
+        "sprite": {
+            "texture": "res://assets/sprites/entities/items/shell.png"
+        }
     }
 }

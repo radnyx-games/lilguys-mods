@@ -500,6 +500,113 @@
             }
         ]
     },
+    "cannon": {
+        "variations": [
+            "DEFAULT",
+            "PREVIEW",
+            "BLUEPRINT",
+            "BLUEPRINT_PREVIEW",
+            "BUILD_PREVIEW"
+        ],
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "COLUMN",
+                        "margin_right": "MEDIUM",
+                        "elements": [
+                            {
+                                "type": "LABEL",
+                                "text": "base:CANNON"
+                            },
+                            {
+                                "id": "subtitle",
+                                "type": "LABEL",
+                                "text": "base:building",
+                                "size": "SMALL",
+                                "color": "NEUTRAL_DARK",
+                                "hide_in_variations": [
+                                    "PREVIEW"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ICON",
+                        "default": "base:CANNON",
+                        "size": "MEDIUM",
+                        "align": "RIGHT",
+                        "pressable": true,
+                        "disabled": true,
+                        "hide_in_variations": [
+                            "PREVIEW"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "healthbar",
+                "type": "HEALTHBAR",
+                "hide_in_variations": [
+                    "BLUEPRINT",
+                    "BLUEPRINT_PREVIEW",
+                    "BUILD_PREVIEW"
+                ]
+            },
+            {
+                "type": "ROW",
+                "margin_top": "SMALL",
+                "separation": "LARGE",
+                "elements": [
+                    {
+                        "id": "entity_type",
+                        "type": "ICON",
+                        "default": "base:GUY",
+                        "pressable": true,
+                        "size": "MEDIUM"
+                    },
+                    {
+                        "id": "count",
+                        "type": "COUNTER",
+                        "separation": "MEDIUM",
+                        "icon": {},
+                        "limit": {}
+                    }
+                ]
+            }
+        ]
+    },
+    "cannon_selection": {
+        "elements": [
+            {
+                "type": "ROW",
+                "elements": [
+                    {
+                        "type": "LABEL",
+                        "text": "base:launch_label",
+                        "align": "CENTER"
+                    }
+                ]
+            },
+            {
+                "id": "list_col",
+                "type": "LIST_COLUMN",
+                "margin_top": "SMALL",
+                "separation": "MEDIUM",
+                "align": "CENTER",
+                "element": {
+                    "id": "list_row",
+                    "type": "LIST_ROW",
+                    "element": {
+                        "type": "ICON",
+                        "size": "LARGE",
+                        "pressable": true
+                    }
+                }
+            }
+        ]
+    },
     "bakery": {
         "variations": [
             "DEFAULT",

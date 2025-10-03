@@ -177,5 +177,33 @@
         "stats": {
             "hp": 20
         }
+    },
+    "CANNON": {
+        "icon": "res://assets/sprites/ui/build/cannon.png",
+        "description": "base:cannon_description",
+        "menu": "base:cannon",
+        "size": {
+            "x": 1,
+            "y": 1
+        },
+        "center": {
+            "x": 24,
+            "y": 32
+        },
+        "blueprint": {
+            "scene": "res://scenes/entities/buildings/Cannon.tscn",
+            "texture": "res://assets/sprites/blueprints/cannon.png",
+            "placement_type": "CLICK",
+            "cost": {
+                "base:ROCK": 20,
+                "base:SHELL": 1
+            }
+        },
+        "stats": {
+            "hp": 20
+        },
+        "default_state": {
+            "entity_type": "base:BOMB"
+        }
     }
 }

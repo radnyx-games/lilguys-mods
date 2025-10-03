@@ -39,6 +39,10 @@
             "base:ROCK",
             "base:ANIMA",
             "base:EMBER",
+            "base:BOMB",
+            "base:SHELL"
+        ],
+        "cannon_menu": [
             "base:BOMB"
         ],
         "build_menu": [
@@ -48,7 +52,8 @@
             "base:DOOR",
             "base:OUTPOST",
             "base:CANDLE",
-            "base:TUB"
+            "base:TUB",
+            "base:CANNON"
         ]
     },
     "icons": {

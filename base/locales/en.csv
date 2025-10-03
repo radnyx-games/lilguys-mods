@@ -6,11 +6,12 @@ blueprint,Blueprint
 resource,Resource
 castle_wall_description,Defensive structure
 dispenser_description,Stores items
-bakery_description,Craft lil guys and\nother items
-door_description,Blocks passage of enemies
+bakery_description,Makes lil guys and\nother items
+door_description,Blocks passage of monsters
 outpost_description,Lil guys defend\nthe surrounding area
 candle_description,Lights the darkness
 tub_description,Recovers health\nof lil guys
+cannon_description,Launches bombs\nat monsters
 
 saved_game,Saved game!
 save_failed,Save failed!
@@ -64,6 +65,7 @@ store_label,STORE
 class_label,CLASS
 limit_checkbox_label,limit:
 allow_all_checkbox_label,allow all
+launch_label,LAUNCH
 
 
 ROCK,Crumb
@@ -73,6 +75,7 @@ SWORD,Sword
 SHIELD,Shield
 ANIMA,Anima
 EMBER,Ember
+SHELL,Shell
 
 CAVE_WALL,Cave Wall
 CASTLE_WALL,Castle Wall
@@ -83,6 +86,7 @@ OUTPOST,Outpost
 CANDLE,Candle
 CLUSTER,Cluster
 TUB,Cauldron
+CANNON,Cannon
 
 GUY,Lil guy
 SKULLOS,Skullos
