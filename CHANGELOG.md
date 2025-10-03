@@ -1,10 +1,11 @@
-## 0.0.8 - 2025-10-02
+## 0.0.8 - 2025-10-03
 
 ### Features
 
 - New item: Shell. Dropped by Shelltanks.
 - New building: Cannon. Launches bombs.
 - Bombs can be crafted with Embers.
+- Option to start next wave of monsters early.
 - Title music.
 - SFX improvements.
 
