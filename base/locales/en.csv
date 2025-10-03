@@ -17,7 +17,9 @@ saved_game,Saved game!
 save_failed,Save failed!
 saved_screenshot,Screenshot saved!
 copied_to_clipboard,Copied to clipboard!
-
+starting_round,Starting round {}!
+advance_round,Advance to round {}
+current_round,Round {}
 
 select_hint,Select
 
