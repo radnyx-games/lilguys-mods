@@ -133,7 +133,7 @@ static func _connect_equipment(events):
         # Unless it's a Lyre Bow, in which case they should be a healer.
         character.remove_tag(BASIC_CLASS_TAG)
         # TODO: organize component APIs like `character.container` and `character.health`.
-        character.set_container_max_limit(3))
+        character.set_container_max_limit(5))
 
 static func _set_king(api, king):
     api.world.set_destruction_center(PLAYER_TEAM, king)
