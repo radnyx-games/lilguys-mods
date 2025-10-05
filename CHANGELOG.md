@@ -1,10 +1,18 @@
-## 0.0.8 - 2025-10-03
+## 0.0.8 - 2025-10-04
+
+Finally, Cannons! The lil guys can now defend their kingdom from afar, with bombs. You can make Cannons with Shells, a new drop from Shelltanks, and you can craft Bombs with Ember. (Be careful not to explode a Dispenser full of them...) In future updates, you'll be able to launch other kinds of ammo with Cannons, as well as lil guys themselves!
+
+This update also includes some balancing. I tweaked drops and spawn rates to make sure the player isn't too deprived or overburdened with items. There's still quite an abundance of Anima though. That'll improve once you're able to grow mushrooms with them.
+
+And also, title music!
 
 ### Features
 
 - New item: Shell. Dropped by Shelltanks.
 - New building: Cannon. Launches bombs.
 - Bombs can be crafted with Embers.
+- Bombs do double damage to blocks.
+- Lil guys can carry 3 items at a time.
 - Option to start next wave of monsters early.
 - Title music.
 - SFX improvements.
