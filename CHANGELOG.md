@@ -1,3 +1,5 @@
+## 0.0.9 - 2025-10-05
+
 ## 0.0.8 - 2025-10-04
 
 Finally, Cannons! The lil guys can now defend their kingdom from afar, with bombs. You can make Cannons with Shells, a new drop from Shelltanks, and you can craft Bombs with Ember. (Be careful not to explode a Dispenser full of them...) In future updates, you'll be able to launch other kinds of ammo with Cannons, as well as lil guys themselves!
