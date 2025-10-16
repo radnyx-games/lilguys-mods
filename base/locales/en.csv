@@ -22,6 +22,9 @@ copied_to_clipboard,Copied to clipboard!
 starting_round,Starting round {}!
 advance_round,Advance to round {}
 current_round,Round {}
+debug_instant_build_enabled,Instant build enabled!
+debug_instant_build_disabled,Instant build disabled!
+
 
 select_hint,Select
 
@@ -33,7 +36,7 @@ destroy_hint,Destroy
 cancel_hint,Cancel
 deselect_hint,Deselect
 cancel_work_hint,Cancel lil guys' work
-copy_hint,Copy blueprint
+copy_hint,Copy building
 
 assign_job_hint,Assign lil guys to this job
 force_assign_job_hint,Force assign to this job
